@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>911dc.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#318a86",
+              grey: "#f4f4f4",
+            },
+          },
+          container: {
+            padding: "2rem",
+            center: true,
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="assets-css/theme.css" />
+  </head>
+  <body x-data="{ menuOpen: false }" :class=" menuOpen ? 'overflow-hidden h-screen' : ''">
+    <div class="page">
+      <header class="px-12 py-7 sticky top-0 bg-white z-20 border-b border-gray-200">
+        <div class="flex flex-row items-center justify-between">
+          <a href="./">
+            <img src="./assets/logo.png" alt="Logo 911 Delicious Company" class="w-[200px]" />
+          </a>
+          <div class="flex items-center justify-center">
+            <div class="w-[28px] flex flex-col gap-2 cursor-pointer" id="trigger-menu" x-on:click="menuOpen = !menuOpen">
+              <div class="w-full h-[2px] bg-brand"></div>
+              <div class="w-full h-[2px] bg-brand"></div>
+              <div class="w-full h-[2px] bg-brand"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="order-bar-section" class="bg-white md:bg-grey py-4 md:py-8 fixed bottom-0 w-full md:relative z-10">
+        <div class="container">
+          <div class="flex justify-between items-center">
+            <div class="hidden md:block">
+              <h2 class="font-bold uppercase text-2xl">All day every day</h2>
+              <p>Nos restaurants: Chenôve - Dijon - Talant</p>
+            </div>
+            <div class="text-center w-full md:w-auto">
+              <a href="https://commander.911dc.com/fr" class="bg-brand text-white rounded-lg font-bold lg:px-8 py-4 text-lg uppercase hover:opacity-80 inline-block px-20">Commander</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="carousel-section">
+        <div class="container">
+          <div class="carousel mt-14">
+            <div class="carousel-item relative">
+              <div class="carousel-title absolute bg-brand uppercase text-white px-20 py-4 font-bold text-2xl -left-12 bottom-10 hidden">La new salmon</div>
+              <img src="./assets/site-web-home-desktop-compressed.jpeg" class="rounded-2xl w-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="bloc-sections" class="my-16">
+        <div class="container">
+          <div class="flex flex-col md:grid grid-cols-2 gap-x-20 gap-10 md:gap-y-16">
+            <div class="bg-gray-100 rounded-xl overflow-hidden flex flex-col order-1">
+              <img src="./assets/Cover9111.jpg" class="h-[200px] object-cover w-full" />
+              <div class="p-10 flex flex-col flex-1">
+                <h2 class="font-bold text-xl mb-4">Fresh Pizza & Smash Burger ALL TOGETHER !</h2>
+                <p class="leading-loose text-slate-800">911 Delicious Company c’est Fresh Pizza & Smash Burger au même endroit dans un cadre New Yorkais. Un corner 911 coffee avec un produit unique le doWnut est aussi disponible dans nos restaurants</p>
+                <div class="text-center mt-auto">
+                  <a href="#" class="bg-brand text-white rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 inline-block mt-8">Le concept</a>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-100 rounded-xl overflow-hidden flex flex-col order-3 md:order-2">
+              <img src="./assets/1-Accueil-911.jpg" class="h-[200px] object-cover w-full" />
+              <div class="p-10 flex flex-col flex-1">
+                <h2 class="font-bold text-xl mb-4">Rejoignez la famille 911 Delicious Company</h2>
+                <p class="leading-loose">Concept multi produits et adaptatif rejoignez le Spirit of New York. Évoluer avec passion dans un environnement de travail intelligent et structuré.</p>
+                <div class="text-center text-slate-800 mt-auto">
+                  <a href="#" class="bg-brand text-white rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 inline-block mt-8">devenir franchisé</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-2 bg-brand text-white px-6 md:px-20 py-6 rounded-xl order-2 md:order-3">
+              <div class="flex items-center justify-between">
+                <img src="./assets/911-family-illustration.png" class="w-[100px] md:w-auto" />
+                <div class="text-right">
+                  <img src="./assets/911-family-logo.png" class="inline-block mb-6 w-[200px] md:w-auto" />
+                  <h4 class="font-bold text-md md:text-xl uppercase">LE MEILLEUR DES PROGRAMMES DE fidelité</h4>
+                  <a href="https://911family.zerosix.com/" class="bg-white text-brand rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 md:inline-block mt-8 hidden">en savoir +</a>
+                </div>
+              </div>
+
+              <div class="md:hidden text-center">
+                <a href="https://911family.zerosix.com/" class="bg-white text-brand rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 inline-block mt-8">en savoir +</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-[#202837] text-white py-14 pb-32 md:pb-14">
+        <div class="container">
+          <div class="flex flex-col-reverse md:flex-row items-center gap-20 justify-between">
+            <div class="flex-1">
+              <a href="#" class="font-bold mb-4 inline-block">911 Delicious Company</a>
+              <nav class="font-light">
+                <ul class="grid grid-cols-2 gap-2 max-w-[400px]">
+                  <li><a href="#" class="hover:underline">Concept</a></li>
+                  <li><a href="#" class="hover:underline">History</a></li>
+                  <li><a href="./coffee.html" class="hover:underline">911 Coffee</a></li>
+                  <li><a href="#" class="hover:underline">911 Junior</a></li>
+                  <li><a href="#" class="hover:underline">911 Family</a></li>
+                  <li><a href="#" class="hover:underline">Devenir franchise</a></li>
+                </ul>
+              </nav>
+              <nav class="font-light">
+                <ul class="flex flex-row space-x-10 mt-8">
+                  <li><a href="#" class="hover:underline">CGV</a></li>
+                  <li><a href="#" class="hover:underline">Mention legales</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="flex-1">
+              <ul class="flex gap-8 items-center justify-center">
+                <li>
+                  <a href="https://www.facebook.com/911dcfrance" class="hover:opacity-80">
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M42 21C42 9.40078 32.5992 0 21 0C9.40078 0 0 9.40078 0 21C0 31.4828 7.67484 40.1707 17.7204 41.7465V27.0752H12.3925V21H17.7204V16.3743C17.7204 11.1152 20.8499 8.20477 25.6487 8.20477C27.9497 8.20477 30.3548 8.61902 30.3548 8.61902V13.7854H27.7085C25.0966 13.7854 24.2911 15.4079 24.2911 17.065V21H30.1137L29.1818 27.0752H24.2911V41.7465C34.3252 40.1707 42 31.4828 42 21Z" fill="white" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/911dcfrance/" class="hover:opacity-80">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.4381 19.6855C13.4381 16.1592 16.2961 13.2997 19.8226 13.2997C23.3491 13.2997 26.2087 16.1592 26.2087 19.6855C26.2087 23.2119 23.3491 26.0713 19.8226 26.0713C16.2961 26.0713 13.4381 23.2119 13.4381 19.6855ZM9.98594 19.6855C9.98594 25.1181 14.3898 29.5218 19.8226 29.5218C25.2555 29.5218 29.6593 25.1181 29.6593 19.6855C29.6593 14.2529 25.2555 9.84922 19.8226 9.84922C14.3898 9.84922 9.98594 14.2529 9.98594 19.6855ZM27.75 9.4592C27.7494 10.7287 28.7782 11.7583 30.0478 11.7588C31.3174 11.7593 32.347 10.7306 32.3475 9.46104C32.3481 8.1915 31.3193 7.16193 30.0497 7.16142C28.7807 7.16201 27.7511 8.19027 27.75 9.4592ZM12.0834 35.2779C10.2157 35.1929 9.20052 34.8818 8.5259 34.619C7.63152 34.2708 6.99337 33.8561 6.32243 33.1861C5.65149 32.5161 5.23617 31.8786 4.88951 30.9843C4.62653 30.31 4.31543 29.2946 4.23053 27.4269C4.13766 25.4078 4.11911 24.8012 4.11911 19.6857C4.11911 14.5701 4.13919 13.9653 4.23053 11.9444C4.31558 10.0768 4.62898 9.06337 4.88951 8.38709C5.23771 7.49274 5.65241 6.85462 6.32243 6.18371C6.99245 5.51279 7.62998 5.09749 8.5259 4.75085C9.20021 4.48788 10.2157 4.17678 12.0834 4.09189C14.1026 3.99902 14.7092 3.98048 19.8226 3.98048C24.9361 3.98048 25.5433 4.00055 27.5642 4.09189C29.4319 4.17694 30.4454 4.49033 31.1217 4.75085C32.0161 5.09749 32.6542 5.51371 33.3251 6.18371C33.9961 6.8537 34.4099 7.49274 34.7581 8.38709C35.021 9.06138 35.3321 10.0768 35.417 11.9444C35.5099 13.9653 35.5285 14.5701 35.5285 19.6857C35.5285 24.8012 35.5099 25.4061 35.417 27.4269C35.332 29.2946 35.0194 30.3097 34.7581 30.9843C34.4099 31.8786 33.9952 32.5167 33.3251 33.1861C32.6551 33.8555 32.0161 34.2708 31.1217 34.619C30.4474 34.8819 29.4319 35.193 27.5642 35.2779C25.545 35.3708 24.9384 35.3893 19.8226 35.3893C14.7069 35.3893 14.102 35.3708 12.0834 35.2779ZM11.9247 0.645671C9.88541 0.738539 8.49188 1.06189 7.2749 1.53542C6.01455 2.02443 4.9476 2.68048 3.88142 3.74494C2.81524 4.80939 2.16085 5.87798 1.67181 7.13828C1.19826 8.35598 0.874899 9.74869 0.782028 11.7879C0.687624 13.8304 0.666016 14.4834 0.666016 19.6855C0.666016 24.8876 0.687624 25.5406 0.782028 27.5831C0.874899 29.6225 1.19826 31.0151 1.67181 32.2328C2.16085 33.4923 2.81539 34.5621 3.88142 35.6261C4.94744 36.6901 6.01455 37.3452 7.2749 37.8356C8.49418 38.3092 9.88541 38.6325 11.9247 38.7254C13.9684 38.8182 14.6203 38.8414 19.8226 38.8414C25.025 38.8414 25.678 38.8198 27.7205 38.7254C29.76 38.6325 31.1526 38.3092 32.3704 37.8356C33.63 37.3452 34.6977 36.6906 35.7639 35.6261C36.83 34.5617 37.4831 33.4923 37.9735 32.2328C38.447 31.0151 38.7719 29.6224 38.8633 27.5831C38.9561 25.5391 38.9777 24.8876 38.9777 19.6855C38.9777 14.4834 38.9561 13.8304 38.8633 11.7879C38.7704 9.74853 38.447 8.35521 37.9735 7.13828C37.4831 5.87874 36.8284 4.81107 35.7639 3.74494C34.6994 2.6788 33.63 2.02443 32.3719 1.53542C31.1526 1.06189 29.7599 0.737006 27.7221 0.645671C25.6795 0.552803 25.0265 0.529663 19.8242 0.529663C14.6218 0.529663 13.9684 0.551271 11.9247 0.645671Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@911dcfrance" class="hover:opacity-80">
+                    <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2_163)">
+                        <path
+                          d="M34.2111 16.6175C30.8891 16.6254 27.6486 15.5894 24.9473 13.6558V27.1414C24.9464 29.6391 24.183 32.0769 22.7591 34.129C21.3353 36.1811 19.3189 37.7496 16.9796 38.6247C14.6402 39.4999 12.0895 39.64 9.66836 39.0264C7.24725 38.4127 5.07118 37.0745 3.43113 35.1907C1.79109 33.307 0.765235 30.9674 0.490746 28.4848C0.216258 26.0023 0.706217 23.4951 1.89511 21.2985C3.084 19.102 4.91516 17.3207 7.14373 16.193C9.3723 15.0652 11.8921 14.6447 14.3661 14.9876V21.7704C13.234 21.4143 12.0183 21.425 10.8926 21.8011C9.76696 22.1771 8.78891 22.8992 8.09813 23.8642C7.40734 24.8293 7.03916 25.9879 7.04615 27.1747C7.05314 28.3615 7.43495 29.5157 8.13705 30.4725C8.83915 31.4294 9.82565 32.1399 10.9557 32.5026C12.0857 32.8654 13.3014 32.8618 14.4292 32.4924C15.5571 32.1229 16.5393 31.4066 17.2358 30.4456C17.9322 29.4846 18.3072 28.3282 18.3072 27.1414V0.778442H24.9473C24.9427 1.33919 24.9897 1.89917 25.0877 2.45131C25.3184 3.68388 25.7982 4.85641 26.4976 5.8972C27.197 6.93799 28.1015 7.82515 29.1555 8.50442C30.6551 9.49599 32.4133 10.0245 34.2111 10.0241V16.6175Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2_163">
+                          <rect width="33.8045" height="38.6337" fill="white" transform="translate(0.406738 0.778442)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div x-cloak x-show="menuOpen">
+      <div class="fixed top-0 bottom-0 right-0 w-3/4 lg:w-[400px] bg-white z-30 p-4" x-show="menuOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-x-10" x-transition:enter-end="opacity-100 translate-x-0">
+        <div class="flex flex-col h-screen overflow-y-auto pb-16">
+          <div class="flex item-center justify-between mb-6">
+            <div>
+              <a href="./">
+                <img src="./assets/logo.png" alt="Logo 911 Delicious Company" class="w-[140px]" />
+              </a>
+            </div>
+            <div x-on:click="menuOpen = !menuOpen" class="flex items-center justify-center cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L18 6M6 6L18 18" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <a href="#" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">Nice to meet you</a>
+                  <ul class="pl-10">
+                    <li><a href="#" class="text-brand font-bold text-lg hover:bg-gray-100 rounded-xl block p-2 px-4">Concept</a></li>
+                    <li><a href="#" class="text-brand font-bold text-lg hover:bg-gray-100 rounded-xl block p-2 px-4">History</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">Devenir franchisé</a></li>
+                <li><a href="./coffee.html" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">911 coffee</a></li>
+                <li><a href="#" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">911 junior</a></li>
+                <li><a href="#" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">delicious & halal</a></li>
+                <li><a href="#" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">espace fidelité</a></li>
+              </ul>
+            </nav>
+            <div class="text-center mt-6">
+              <a href="#" class="bg-brand text-white rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 inline-block">Commander</a>
+            </div>
+            <div class="-mx-10">
+              <div class="bg-gray-100 mt-6 p-4">
+                <ul class="flex gap-8 items-center justify-center">
+                  <li>
+                    <a href="#">
+                      <svg width="42" height="42" viewBox="0 0 42 42" class="fill-brand" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M42 21C42 9.40078 32.5992 0 21 0C9.40078 0 0 9.40078 0 21C0 31.4828 7.67484 40.1707 17.7204 41.7465V27.0752H12.3925V21H17.7204V16.3743C17.7204 11.1152 20.8499 8.20477 25.6487 8.20477C27.9497 8.20477 30.3548 8.61902 30.3548 8.61902V13.7854H27.7085C25.0966 13.7854 24.2911 15.4079 24.2911 17.065V21H30.1137L29.1818 27.0752H24.2911V41.7465C34.3252 40.1707 42 31.4828 42 21Z" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg width="39" height="39" viewBox="0 0 39 39" class="fill-brand" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.4381 19.6855C13.4381 16.1592 16.2961 13.2997 19.8226 13.2997C23.3491 13.2997 26.2087 16.1592 26.2087 19.6855C26.2087 23.2119 23.3491 26.0713 19.8226 26.0713C16.2961 26.0713 13.4381 23.2119 13.4381 19.6855ZM9.98594 19.6855C9.98594 25.1181 14.3898 29.5218 19.8226 29.5218C25.2555 29.5218 29.6593 25.1181 29.6593 19.6855C29.6593 14.2529 25.2555 9.84922 19.8226 9.84922C14.3898 9.84922 9.98594 14.2529 9.98594 19.6855ZM27.75 9.4592C27.7494 10.7287 28.7782 11.7583 30.0478 11.7588C31.3174 11.7593 32.347 10.7306 32.3475 9.46104C32.3481 8.1915 31.3193 7.16193 30.0497 7.16142C28.7807 7.16201 27.7511 8.19027 27.75 9.4592ZM12.0834 35.2779C10.2157 35.1929 9.20052 34.8818 8.5259 34.619C7.63152 34.2708 6.99337 33.8561 6.32243 33.1861C5.65149 32.5161 5.23617 31.8786 4.88951 30.9843C4.62653 30.31 4.31543 29.2946 4.23053 27.4269C4.13766 25.4078 4.11911 24.8012 4.11911 19.6857C4.11911 14.5701 4.13919 13.9653 4.23053 11.9444C4.31558 10.0768 4.62898 9.06337 4.88951 8.38709C5.23771 7.49274 5.65241 6.85462 6.32243 6.18371C6.99245 5.51279 7.62998 5.09749 8.5259 4.75085C9.20021 4.48788 10.2157 4.17678 12.0834 4.09189C14.1026 3.99902 14.7092 3.98048 19.8226 3.98048C24.9361 3.98048 25.5433 4.00055 27.5642 4.09189C29.4319 4.17694 30.4454 4.49033 31.1217 4.75085C32.0161 5.09749 32.6542 5.51371 33.3251 6.18371C33.9961 6.8537 34.4099 7.49274 34.7581 8.38709C35.021 9.06138 35.3321 10.0768 35.417 11.9444C35.5099 13.9653 35.5285 14.5701 35.5285 19.6857C35.5285 24.8012 35.5099 25.4061 35.417 27.4269C35.332 29.2946 35.0194 30.3097 34.7581 30.9843C34.4099 31.8786 33.9952 32.5167 33.3251 33.1861C32.6551 33.8555 32.0161 34.2708 31.1217 34.619C30.4474 34.8819 29.4319 35.193 27.5642 35.2779C25.545 35.3708 24.9384 35.3893 19.8226 35.3893C14.7069 35.3893 14.102 35.3708 12.0834 35.2779ZM11.9247 0.645671C9.88541 0.738539 8.49188 1.06189 7.2749 1.53542C6.01455 2.02443 4.9476 2.68048 3.88142 3.74494C2.81524 4.80939 2.16085 5.87798 1.67181 7.13828C1.19826 8.35598 0.874899 9.74869 0.782028 11.7879C0.687624 13.8304 0.666016 14.4834 0.666016 19.6855C0.666016 24.8876 0.687624 25.5406 0.782028 27.5831C0.874899 29.6225 1.19826 31.0151 1.67181 32.2328C2.16085 33.4923 2.81539 34.5621 3.88142 35.6261C4.94744 36.6901 6.01455 37.3452 7.2749 37.8356C8.49418 38.3092 9.88541 38.6325 11.9247 38.7254C13.9684 38.8182 14.6203 38.8414 19.8226 38.8414C25.025 38.8414 25.678 38.8198 27.7205 38.7254C29.76 38.6325 31.1526 38.3092 32.3704 37.8356C33.63 37.3452 34.6977 36.6906 35.7639 35.6261C36.83 34.5617 37.4831 33.4923 37.9735 32.2328C38.447 31.0151 38.7719 29.6224 38.8633 27.5831C38.9561 25.5391 38.9777 24.8876 38.9777 19.6855C38.9777 14.4834 38.9561 13.8304 38.8633 11.7879C38.7704 9.74853 38.447 8.35521 37.9735 7.13828C37.4831 5.87874 36.8284 4.81107 35.7639 3.74494C34.6994 2.6788 33.63 2.02443 32.3719 1.53542C31.1526 1.06189 29.7599 0.737006 27.7221 0.645671C25.6795 0.552803 25.0265 0.529663 19.8242 0.529663C14.6218 0.529663 13.9684 0.551271 11.9247 0.645671Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg width="35" height="40" viewBox="0 0 35 40" class="fill-brand" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2_163)">
+                          <path
+                            d="M34.2111 16.6175C30.8891 16.6254 27.6486 15.5894 24.9473 13.6558V27.1414C24.9464 29.6391 24.183 32.0769 22.7591 34.129C21.3353 36.1811 19.3189 37.7496 16.9796 38.6247C14.6402 39.4999 12.0895 39.64 9.66836 39.0264C7.24725 38.4127 5.07118 37.0745 3.43113 35.1907C1.79109 33.307 0.765235 30.9674 0.490746 28.4848C0.216258 26.0023 0.706217 23.4951 1.89511 21.2985C3.084 19.102 4.91516 17.3207 7.14373 16.193C9.3723 15.0652 11.8921 14.6447 14.3661 14.9876V21.7704C13.234 21.4143 12.0183 21.425 10.8926 21.8011C9.76696 22.1771 8.78891 22.8992 8.09813 23.8642C7.40734 24.8293 7.03916 25.9879 7.04615 27.1747C7.05314 28.3615 7.43495 29.5157 8.13705 30.4725C8.83915 31.4294 9.82565 32.1399 10.9557 32.5026C12.0857 32.8654 13.3014 32.8618 14.4292 32.4924C15.5571 32.1229 16.5393 31.4066 17.2358 30.4456C17.9322 29.4846 18.3072 28.3282 18.3072 27.1414V0.778442H24.9473C24.9427 1.33919 24.9897 1.89917 25.0877 2.45131C25.3184 3.68388 25.7982 4.85641 26.4976 5.8972C27.197 6.93799 28.1015 7.82515 29.1555 8.50442C30.6551 9.49599 32.4133 10.0245 34.2111 10.0241V16.6175Z"
+                            fill="fill-brand"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_2_163">
+                            <rect width="33.8045" height="38.6337" transform="translate(0.406738 0.778442)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixed top-0 bottom-0 left-0 right-0 h-screen backdrop-blur z-20 bg-[#03031c99]" x-on:click="menuOpen = !menuOpen"></div>
+    </div>
+  </body>
+</html>

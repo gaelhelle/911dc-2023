@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <title>911 Delicious Company - Fresh Pizza & Smash Burger All Together</title>
+    <link rel="icon" href="assets-images/favicon.png" type="image/x-icon" />
+    <link rel="canonical" href="coffee.html" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="Commande vite chez 911® et retrouve le meilleur du SMASH BURGER et de la FRESH PIZZA sur place, en Click & Collect et en livraison. Avec l’appli, rejoins vite le programme de fidélité 911 Family® et retrouve les restos les plus proches et bien plus encore.  Avec le programme de fidélité 911 Family® cumule des points à chaque commande et profite de produits offerts. Tu peux accéder à ta carte et la scanner dans les restaurants en caisse ou sur les bornes. Si tu commandes avec l’appli, alors tes points sont automatiquement crédités sur ta carte ! " />
+
+    <meta name="geo.region" content="FR" />
+
+    <link rel="stylesheet" type="text/css" href="assets-css/6c619ada06c2a0fac125c210a65e26bc-splide.css" />
+    <link rel="stylesheet" type="text/css" href="assets-css/2bd557f8eed4062cb70a58e519977f5c-touch.css" />
+    <link rel="stylesheet" type="text/css" href="assets-css/18fb7d93a601a2cfa40de334430f7fa9-theme.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#318a86",
+              grey: "#f4f4f4",
+            },
+          },
+          container: {
+            padding: "2rem",
+            center: true,
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="assets-css/theme.css" />
+
+    <script type="text/javascript">
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, "script", "../www.google-analytics.com/analytics.js", "ga");
+
+      ga("create", "UA-163776756-1", "auto");
+      ga("send", "pageview");
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "../connect.facebook.net/en_US/fbevents.js");
+
+      fbq("init", "250479029473535");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="../www.facebook.com/tr75cb?id=250479029473535&amp;ev=PageView&amp;noscript=1" /></noscript>
+  </head>
+
+  <body dir="ltr" class="page page_coffee page_improved" x-data="{ menuOpen: false }" :class=" menuOpen ? 'overflow-hidden h-screen' : ''">
+    <noscript>
+      <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-WQ9L29K" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "../www.googletagmanager.com/gtm5445.html?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WQ9L29K");
+    </script>
+
+    <div class="page">
+      <header class="px-12 py-7 sticky top-0 bg-white z-20 border-b border-gray-200">
+        <div class="flex flex-row items-center justify-between">
+          <a href="./">
+            <img src="./assets/logo.png" alt="Logo 911 Delicious Company" class="w-[200px]" />
+          </a>
+          <div class="flex items-center justify-center">
+            <div class="w-[28px] flex flex-col gap-2 cursor-pointer" id="trigger-menu" x-on:click="menuOpen = !menuOpen">
+              <div class="w-full h-[2px] bg-brand"></div>
+              <div class="w-full h-[2px] bg-brand"></div>
+              <div class="w-full h-[2px] bg-brand"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <div class="message message_info" id="message-fadeout">
+          <div class="message__wrapper">
+            <div class="message__content"></div>
+          </div>
+        </div>
+
+        <div class="message message_info message_info-centred" id="message-info-centred">
+          <div class="message__wrapper">
+            <div class="message__content"></div>
+          </div>
+        </div>
+
+        <div class="page__topbar" id="page-topbar"></div>
+        <div class="page__overlay" id="page-overlay"></div>
+
+        <div class="page__popup-holder popup-holder-improved" id="popup-holder"></div>
+
+        <div class="page-lightbox-overlay" id="page-lightbox-overlay"></div>
+
+        <div class="page-lightbox" id="page-lightbox">
+          <div class="page-lightbox__header">
+            <a href="#" class="page-lightbox__close" id="page-lightbox-close"> Cancel </a>
+          </div>
+          <div class="page-lightbox__content" id="page-lightbox-content"></div>
+        </div>
+
+        <div class="page__wrapper" id="page-wrapper">
+          <div class="page__content">
+            <div class="content">
+              <div class="content__wrapper">
+                <div class="content__side content__side_hidden-on-desktop">
+                  <div class="content__side-wrapper">
+                    <div id="sidebar-ofc" class="off-canvas off-canvas_right">
+                      <div class="off-canvas__wrapper">
+                        <div class="off-canvas__content"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <section class="marketing-page marketing-page_coffee">
+                  <div class="page-banner">
+                    <div class="page-banner__wrapper">
+                      <img src="./assets-images/11822100.jpg" class="page-banner__image page-banner__image_desktop" alt="911 Delicious Company" width="1682" height="603" />
+                      <img src="./assets-images/11822101.jpg" class="page-banner__image page-banner__image_mobile" alt="911 Delicious Company" width="800" height="800" />
+                    </div>
+                  </div>
+
+                  <div class="page-info">
+                    <div class="page-info__wrapper">
+                      <h2 class="page-info__title">OFFREZ VOUS UNE PARENTHÈSE 911 COFFEE® & découvrez le doWnut®</h2>
+
+                      <p>Tous les jours, nous vous accueillons pour un moment chaleureux et d&eacute;licieux dans nos espaces <strong>911 Coffee&reg;</strong> . Nos corner&nbsp;<strong>911 Coffee&reg;</strong>&nbsp;vous offre une gamme de produits sucr&eacute;s &agrave; d&eacute;guster &agrave; toute heure de la journ&eacute;e. Nos espaces cosy&nbsp;<strong>911 Coffee&reg;</strong>&nbsp;vous permettent de profiter d'un cadre agr&eacute;able et de passer un d&eacute;licieux moment seul, entre amis ou en famille... et m&ecirc;me pour le travail (on vous donnera le code wifi ;)</p>
+                      <p>Muffins, cookies, cheesecakes... et le fameux doWnut&reg;, aggr&eacute;ment&eacute; d'une boisson chaude : caf&eacute;, latte macchiato, cappuccino... ou boisson froide, avec nos d&eacute;licieuse limonades bios et &eacute;quitables LemonAid !</p>
+                    </div>
+                  </div>
+
+                  <div class="page-adv">
+                    <div class="page-adv__wrapper">
+                      <div class="adv-section">
+                        <h3 class="adv-section__title">doWnut® : BIEN PLUS QU’UN DONUT !</h3>
+
+                        <div class="adv-section__contents">
+                          <div class="adv-section__img-outer">
+                            <img src="./assets-images/11875739.png" class="adv-section__img" alt="911 Delicious Company" width="650" height="730" />
+                          </div>
+
+                          <div class="adv-section__texts">
+                            <p>D&eacute;couvre&nbsp;<strong>doWnut&reg;</strong>, une d&eacute;licieuse cr&eacute;ation &eacute;labor&eacute;e par&nbsp;<strong>911&reg;</strong>&nbsp;au go&ucirc;t incomparable .<strong>doWnut&reg;</strong>, c&rsquo;est la contraction des mots&nbsp;<em>donut</em>&nbsp;(p&acirc;tisserie c&eacute;l&egrave;bre en forme d'anneau) et&nbsp;<em>Waffle</em> (gaufre).&nbsp;<strong>doWnut&reg;</strong> c&rsquo;est une p&acirc;te fra&icirc;che &eacute;labor&eacute;e chaque jour selon notre recette exclusive. Cette d&eacute;licieuse p&acirc;tisserie est fa&icirc;te maison avec des ingr&eacute;dients frais, et de qualit&eacute;. Le&nbsp;<strong>doWnut&reg;</strong> est pauvre en mati&egrave;re grasse, il est cuit et gauffr&eacute; sur place ! Le <strong>doWnut&reg;</strong> se d&eacute;guste nature, ou aggr&eacute;menter d'un nappage :</p>
+                            <ul>
+                              <li>au chocolat au lait p&acirc;tissier</li>
+                              <li>au chocolat blanc p&acirc;tissier</li>
+                            </ul>
+                            <p>Il est possible d'ajouter un topping pour encore plus de gourmandise :&nbsp;</p>
+                            <ul>
+                              <li>Oreo&reg;</li>
+                              <li>M&amp;Ms&reg;</li>
+                              <li>Kinder chocolat&reg;</li>
+                            </ul>
+                          </div>
+
+                          <ul class="adv-section__list">
+                            <li class="adv-section__item">PÂTE FRAÎCHE</li>
+
+                            <li class="adv-section__item">FAIT MAISON</li>
+
+                            <li class="adv-section__item">CUIT SUR PLACE</li>
+
+                            <li class="adv-section__item">FAIBLE EN MATIÈRE GRASSE</li>
+                          </ul>
+                        </div>
+
+                        <div class="adv-cards">
+                          <div class="adv-card">
+                            <img src="./assets-images/11875713.png" class="adv-card__image" alt="911 Delicious Company" width="600" height="600" />
+                            <div class="adv-card__contents">
+                              <h4 class="adv-card__title">doWnut !</h4>
+
+                              Un goût unique à tester de toute urgence
+                            </div>
+                          </div>
+
+                          <div class="adv-card">
+                            <img src="./assets-images/11875712.png" class="adv-card__image" alt="911 Delicious Company" width="600" height="600" />
+                            <div class="adv-card__contents">
+                              <h4 class="adv-card__title">à chacun ses goûts !</h4>
+
+                              Nappage chocolat, topping Oreo, M&Ms...
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="coffee-set-section">
+                    <div class="coffee-set-section__wrapper">
+                      <div class="coffee-set-section__title">
+                        <h3>MAIS ENCORE&hellip;</h3>
+                      </div>
+
+                      <p>D&eacute;gustez nos&nbsp;<strong>viennoiseries</strong>&nbsp;et nos<br /><strong>p&acirc;tisseries</strong>&nbsp;from New York et savourez une<br /><strong>d&eacute;licieuse boisson chaude ou froide.</strong></p>
+
+                      <div class="coffee-set-subsection">
+                        <h5 class="coffee-set-subsection__title">BOISSONS CHAUDES</h5>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11773947.png" class="set-card__img" alt="911 Delicious Company" width="402" height="296" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">EXPRESSO</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11773948.png" class="set-card__img" alt="911 Delicious Company" width="402" height="296" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">DOUBLE EXPRESSO</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11773949.png" class="set-card__img" alt="911 Delicious Company" width="402" height="296" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">LATTE MACCHIATO CARAMEL</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11773950.png" class="set-card__img" alt="911 Delicious Company" width="402" height="296" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">CHOCOLAT CHAUD</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11773951.png" class="set-card__img" alt="911 Delicious Company" width="402" height="296" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">CAPPUCCHINO</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11773952.png" class="set-card__img" alt="911 Delicious Company" width="402" height="296" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">THÉ</h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="coffee-set-subsection">
+                        <h5 class="coffee-set-subsection__title">BOISSONS FROIDES</h5>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11775814.png" class="set-card__img" alt="911 Delicious Company" width="1000" height="1000" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">JUS DE FRUITS</h4>
+
+                            <p class="set-card__description">(ORANGE, POMME)</p>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11775815.png" class="set-card__img" alt="911 Delicious Company" width="1000" height="1000" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">EAU MINERALE</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11775816.png" class="set-card__img" alt="911 Delicious Company" width="1000" height="1000" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">San Pellegrino</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11875714.png" class="set-card__img" alt="911 Delicious Company" width="600" height="600" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">LEMONAID PASSION</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11875715.png" class="set-card__img" alt="911 Delicious Company" width="600" height="600" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">LEMONAID CITRON VERT</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11875716.png" class="set-card__img" alt="911 Delicious Company" width="600" height="600" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">LEMONAID ORANGE SANGUINE</h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="coffee-set-subsection">
+                        <h5 class="coffee-set-subsection__title">PÂTISSERIES</h5>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11875717.png" class="set-card__img" alt="911 Delicious Company" width="600" height="600" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">COOKIES</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11875718.png" class="set-card__img" alt="911 Delicious Company" width="600" height="600" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">CHEESECAKE</h4>
+                          </div>
+                        </div>
+
+                        <div class="set-card">
+                          <img src="./assets-images/11875719.png" class="set-card__img" alt="911 Delicious Company" width="600" height="600" />
+
+                          <div class="set-card__texts">
+                            <h4 class="set-card__title">MUFFIN</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="page-banner-section">
+                    <div class="page-banner-section__wrapper">
+                      <img src="./assets-images/11822073.png" class="page-banner__image page-banner__image_desktop" alt="911 Delicious Company" width="1682" height="603" />
+                      <img src="./assets-images/11822074.png" class="page-banner__image page-banner__image_mobile" alt="911 Delicious Company" width="800" height="800" />
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="main-menu-ofc" class="off-canvas off-canvas_left">
+          <div class="off-canvas__wrapper">
+            <div class="off-canvas__content mobile-menu">
+              <div class="mobile-menu__header">
+                <a class="mobile-menu__logo" href="index.html" title="911 Delicious Company">
+                  <img class="header__logo-image header__logo-image_mobile" src="assets-images/logo-mobile-side-menu.svg" alt="911 Delicious Company" />
+                </a>
+                <a class="mobile-menu__close" href="#" onclick="$j.sidr('close','main-menu-ofc'); return false;">
+                  <i class="mobile-menu__close-icon"></i>
+                </a>
+              </div>
+
+              <nav class="mobile-menu__content">
+                <a href="locator.html" class="category-navigation__order-button">Commander</a>
+
+                <div class="header__login-menu">
+                  <a href="#" class="header__login-menu-link" target="_self" onclick="Page.goToLogin(); return false;">
+                    CONNEXION
+                    <i class="dropdown-menu__header-separator-icon"></i>
+                    INSCRIPTION
+                  </a>
+                </div>
+
+                <ul class="mobile-menu__links">
+                  <li>
+                    <a href="locator.html" class="mobile-menu__link mobile-menu__link_carte" target="_self">Carte</a>
+                  </li>
+
+                  <li>
+                    <a href="family.html" class="mobile-menu__link mobile-menu__link_family" target="_self">911 Family®</a>
+                  </li>
+                  <li>
+                    <a href="restaurants.html" class="mobile-menu__link mobile-menu__link_restaurants" target="_self">Nos restaurants</a>
+                  </li>
+
+                  <li>
+                    <a href="login.html" class="mobile-menu__link mobile-menu__link_compte" target="_self">Compte</a>
+                  </li>
+                </ul>
+
+                <div class="mobile-menu__footer">
+                  <ul class="social-icons">
+                    <li class="social-icons__icon">
+                      <a href="https://www.instagram.com/911dcfrance/" class="social-icons__link" target="_blank" title="Instagram">
+                        <img src="assets-images/instagram.svg" class="social-icons__image" alt="Instagram icon" />
+                        <img src="assets-images/instagram-hover.svg" class="social-icons__image social-icons__image_hover" alt="Instagram icon" />
+                      </a>
+                    </li>
+
+                    <li class="social-icons__icon">
+                      <a href="https://www.tiktok.com/@911dcfrance" class="social-icons__link" target="_blank" title="TikTok">
+                        <img src="assets-images/tiktok.svg" class="social-icons__image" alt="Tik tok icon" />
+                        <img src="assets-images/tiktok-hover.svg" class="social-icons__image social-icons__image_hover" alt="Tik tok icon" />
+                      </a>
+                    </li>
+
+                    <li class="social-icons__icon">
+                      <a href="https://www.facebook.com/911dcfrance" class="social-icons__link" target="_blank" title="Facebook">
+                        <img src="assets-images/facebook.svg" class="social-icons__image" alt="Facebook icon" />
+                        <img src="assets-images/facebook-hover.svg" class="social-icons__image social-icons__image_hover" alt="Facebook icon" />
+                      </a>
+                    </li>
+                  </ul>
+
+                  <ul class="footer__links">
+                    <li class=""><a class="footer__link" href="menu.html">Carte</a></li>
+                    <li class=""><a class="footer__link" href="family.html">911 Family®</a></li>
+                    <li class=""><a class="footer__link" href="restaurants.html">Nos restaurants</a></li>
+                    <li class=""><a class="footer__link" href="coffee.html">911 Coffee®</a></li>
+                    <li class=""><a class="footer__link" href="junior.html">911 Junior®</a></li>
+                    <li class=""><a class="footer__link" href="history.html">History</a></li>
+                    <li class=""><a class="footer__link" href="https://franchise.911dc.com/">Devenir franchisé</a></li>
+                    <li class=""><a class="footer__link" href="delicious_halal.html">Delicious & Halal</a></li>
+                    <li class=""><a class="footer__link" href="application.html">Application</a></li>
+                    <li class=""><a class="footer__link" href="condition_de_livraison.html">CONDITION DE LIVRAISON</a></li>
+                    <li class=""><a class="footer__link" href="cgv.html">CGV</a></li>
+                    <li class=""><a class="footer__link" href="mentions_legales.html">MENTIONS LÉGALES</a></li>
+                  </ul>
+
+                  <div class="footer__credits">
+                    <div class="footer__credits-wrapper">
+                      <div class="footer__credits-copyright">&copy; 2023 911 Delicious Company</div>
+
+                      -
+
+                      <div class="footer__credits-powered-by">Powered by <a class="footer__link" href="https://www.livepepper.fr/" target="_blank">LivePepper</a></div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-[#202837] text-white py-14 pb-32 md:pb-14">
+      <div class="container">
+        <div class="flex flex-col-reverse md:flex-row items-center gap-20 justify-between">
+          <div class="flex-1">
+            <a href="#" class="font-bold mb-4 inline-block">911 Delicious Company</a>
+            <nav class="font-light">
+              <ul class="grid grid-cols-2 gap-2 max-w-[400px]">
+                <li><a href="#" class="hover:underline">Concept</a></li>
+                <li><a href="#" class="hover:underline">History</a></li>
+                <li><a href="./coffee.html" class="hover:underline">911 Coffee</a></li>
+                <li><a href="#" class="hover:underline">911 Junior</a></li>
+                <li><a href="#" class="hover:underline">911 Family</a></li>
+                <li><a href="#" class="hover:underline">Devenir franchise</a></li>
+              </ul>
+            </nav>
+            <nav class="font-light">
+              <ul class="flex flex-row space-x-10 mt-8">
+                <li><a href="#" class="hover:underline">CGV</a></li>
+                <li><a href="#" class="hover:underline">Mention legales</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="flex-1">
+            <ul class="flex gap-8 items-center justify-center">
+              <li>
+                <a href="https://www.facebook.com/911dcfrance" class="hover:opacity-80">
+                  <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M42 21C42 9.40078 32.5992 0 21 0C9.40078 0 0 9.40078 0 21C0 31.4828 7.67484 40.1707 17.7204 41.7465V27.0752H12.3925V21H17.7204V16.3743C17.7204 11.1152 20.8499 8.20477 25.6487 8.20477C27.9497 8.20477 30.3548 8.61902 30.3548 8.61902V13.7854H27.7085C25.0966 13.7854 24.2911 15.4079 24.2911 17.065V21H30.1137L29.1818 27.0752H24.2911V41.7465C34.3252 40.1707 42 31.4828 42 21Z" fill="white" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/911dcfrance/" class="hover:opacity-80">
+                  <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.4381 19.6855C13.4381 16.1592 16.2961 13.2997 19.8226 13.2997C23.3491 13.2997 26.2087 16.1592 26.2087 19.6855C26.2087 23.2119 23.3491 26.0713 19.8226 26.0713C16.2961 26.0713 13.4381 23.2119 13.4381 19.6855ZM9.98594 19.6855C9.98594 25.1181 14.3898 29.5218 19.8226 29.5218C25.2555 29.5218 29.6593 25.1181 29.6593 19.6855C29.6593 14.2529 25.2555 9.84922 19.8226 9.84922C14.3898 9.84922 9.98594 14.2529 9.98594 19.6855ZM27.75 9.4592C27.7494 10.7287 28.7782 11.7583 30.0478 11.7588C31.3174 11.7593 32.347 10.7306 32.3475 9.46104C32.3481 8.1915 31.3193 7.16193 30.0497 7.16142C28.7807 7.16201 27.7511 8.19027 27.75 9.4592ZM12.0834 35.2779C10.2157 35.1929 9.20052 34.8818 8.5259 34.619C7.63152 34.2708 6.99337 33.8561 6.32243 33.1861C5.65149 32.5161 5.23617 31.8786 4.88951 30.9843C4.62653 30.31 4.31543 29.2946 4.23053 27.4269C4.13766 25.4078 4.11911 24.8012 4.11911 19.6857C4.11911 14.5701 4.13919 13.9653 4.23053 11.9444C4.31558 10.0768 4.62898 9.06337 4.88951 8.38709C5.23771 7.49274 5.65241 6.85462 6.32243 6.18371C6.99245 5.51279 7.62998 5.09749 8.5259 4.75085C9.20021 4.48788 10.2157 4.17678 12.0834 4.09189C14.1026 3.99902 14.7092 3.98048 19.8226 3.98048C24.9361 3.98048 25.5433 4.00055 27.5642 4.09189C29.4319 4.17694 30.4454 4.49033 31.1217 4.75085C32.0161 5.09749 32.6542 5.51371 33.3251 6.18371C33.9961 6.8537 34.4099 7.49274 34.7581 8.38709C35.021 9.06138 35.3321 10.0768 35.417 11.9444C35.5099 13.9653 35.5285 14.5701 35.5285 19.6857C35.5285 24.8012 35.5099 25.4061 35.417 27.4269C35.332 29.2946 35.0194 30.3097 34.7581 30.9843C34.4099 31.8786 33.9952 32.5167 33.3251 33.1861C32.6551 33.8555 32.0161 34.2708 31.1217 34.619C30.4474 34.8819 29.4319 35.193 27.5642 35.2779C25.545 35.3708 24.9384 35.3893 19.8226 35.3893C14.7069 35.3893 14.102 35.3708 12.0834 35.2779ZM11.9247 0.645671C9.88541 0.738539 8.49188 1.06189 7.2749 1.53542C6.01455 2.02443 4.9476 2.68048 3.88142 3.74494C2.81524 4.80939 2.16085 5.87798 1.67181 7.13828C1.19826 8.35598 0.874899 9.74869 0.782028 11.7879C0.687624 13.8304 0.666016 14.4834 0.666016 19.6855C0.666016 24.8876 0.687624 25.5406 0.782028 27.5831C0.874899 29.6225 1.19826 31.0151 1.67181 32.2328C2.16085 33.4923 2.81539 34.5621 3.88142 35.6261C4.94744 36.6901 6.01455 37.3452 7.2749 37.8356C8.49418 38.3092 9.88541 38.6325 11.9247 38.7254C13.9684 38.8182 14.6203 38.8414 19.8226 38.8414C25.025 38.8414 25.678 38.8198 27.7205 38.7254C29.76 38.6325 31.1526 38.3092 32.3704 37.8356C33.63 37.3452 34.6977 36.6906 35.7639 35.6261C36.83 34.5617 37.4831 33.4923 37.9735 32.2328C38.447 31.0151 38.7719 29.6224 38.8633 27.5831C38.9561 25.5391 38.9777 24.8876 38.9777 19.6855C38.9777 14.4834 38.9561 13.8304 38.8633 11.7879C38.7704 9.74853 38.447 8.35521 37.9735 7.13828C37.4831 5.87874 36.8284 4.81107 35.7639 3.74494C34.6994 2.6788 33.63 2.02443 32.3719 1.53542C31.1526 1.06189 29.7599 0.737006 27.7221 0.645671C25.6795 0.552803 25.0265 0.529663 19.8242 0.529663C14.6218 0.529663 13.9684 0.551271 11.9247 0.645671Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@911dcfrance" class="hover:opacity-80">
+                  <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2_163)">
+                      <path
+                        d="M34.2111 16.6175C30.8891 16.6254 27.6486 15.5894 24.9473 13.6558V27.1414C24.9464 29.6391 24.183 32.0769 22.7591 34.129C21.3353 36.1811 19.3189 37.7496 16.9796 38.6247C14.6402 39.4999 12.0895 39.64 9.66836 39.0264C7.24725 38.4127 5.07118 37.0745 3.43113 35.1907C1.79109 33.307 0.765235 30.9674 0.490746 28.4848C0.216258 26.0023 0.706217 23.4951 1.89511 21.2985C3.084 19.102 4.91516 17.3207 7.14373 16.193C9.3723 15.0652 11.8921 14.6447 14.3661 14.9876V21.7704C13.234 21.4143 12.0183 21.425 10.8926 21.8011C9.76696 22.1771 8.78891 22.8992 8.09813 23.8642C7.40734 24.8293 7.03916 25.9879 7.04615 27.1747C7.05314 28.3615 7.43495 29.5157 8.13705 30.4725C8.83915 31.4294 9.82565 32.1399 10.9557 32.5026C12.0857 32.8654 13.3014 32.8618 14.4292 32.4924C15.5571 32.1229 16.5393 31.4066 17.2358 30.4456C17.9322 29.4846 18.3072 28.3282 18.3072 27.1414V0.778442H24.9473C24.9427 1.33919 24.9897 1.89917 25.0877 2.45131C25.3184 3.68388 25.7982 4.85641 26.4976 5.8972C27.197 6.93799 28.1015 7.82515 29.1555 8.50442C30.6551 9.49599 32.4133 10.0245 34.2111 10.0241V16.6175Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2_163">
+                        <rect width="33.8045" height="38.6337" fill="white" transform="translate(0.406738 0.778442)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div x-cloak x-show="menuOpen">
+      <div class="fixed top-0 bottom-0 right-0 w-3/4 lg:w-[400px] bg-white z-30 p-4" x-show="menuOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-x-10" x-transition:enter-end="opacity-100 translate-x-0">
+        <div class="flex flex-col h-screen overflow-y-auto pb-16">
+          <div class="flex item-center justify-between mb-6">
+            <div>
+              <a href="/">
+                <img src="./assets/logo.png" alt="Logo 911 Delicious Company" class="w-[140px]" />
+              </a>
+            </div>
+            <div x-on:click="menuOpen = !menuOpen" class="flex items-center justify-center cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L18 6M6 6L18 18" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <a href="#" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">Nice to meet you</a>
+                  <ul class="pl-10">
+                    <li><a href="#" class="text-brand font-bold text-lg hover:bg-gray-100 rounded-xl block p-2 px-4">Concept</a></li>
+                    <li><a href="#" class="text-brand font-bold text-lg hover:bg-gray-100 rounded-xl block p-2 px-4">History</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">Devenir franchisé</a></li>
+                <li><a href="./coffee.html" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">911 coffee</a></li>
+                <li><a href="#" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">911 junior</a></li>
+                <li><a href="#" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">delicious & halal</a></li>
+                <li><a href="#" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">espace fidelité</a></li>
+              </ul>
+            </nav>
+            <div class="text-center mt-6">
+              <a href="#" class="bg-brand text-white rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 inline-block">Commander</a>
+            </div>
+            <div class="-mx-10">
+              <div class="bg-gray-100 mt-6 p-4">
+                <ul class="flex gap-8 items-center justify-center">
+                  <li>
+                    <a href="#">
+                      <svg width="42" height="42" viewBox="0 0 42 42" class="fill-brand" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M42 21C42 9.40078 32.5992 0 21 0C9.40078 0 0 9.40078 0 21C0 31.4828 7.67484 40.1707 17.7204 41.7465V27.0752H12.3925V21H17.7204V16.3743C17.7204 11.1152 20.8499 8.20477 25.6487 8.20477C27.9497 8.20477 30.3548 8.61902 30.3548 8.61902V13.7854H27.7085C25.0966 13.7854 24.2911 15.4079 24.2911 17.065V21H30.1137L29.1818 27.0752H24.2911V41.7465C34.3252 40.1707 42 31.4828 42 21Z" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg width="39" height="39" viewBox="0 0 39 39" class="fill-brand" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.4381 19.6855C13.4381 16.1592 16.2961 13.2997 19.8226 13.2997C23.3491 13.2997 26.2087 16.1592 26.2087 19.6855C26.2087 23.2119 23.3491 26.0713 19.8226 26.0713C16.2961 26.0713 13.4381 23.2119 13.4381 19.6855ZM9.98594 19.6855C9.98594 25.1181 14.3898 29.5218 19.8226 29.5218C25.2555 29.5218 29.6593 25.1181 29.6593 19.6855C29.6593 14.2529 25.2555 9.84922 19.8226 9.84922C14.3898 9.84922 9.98594 14.2529 9.98594 19.6855ZM27.75 9.4592C27.7494 10.7287 28.7782 11.7583 30.0478 11.7588C31.3174 11.7593 32.347 10.7306 32.3475 9.46104C32.3481 8.1915 31.3193 7.16193 30.0497 7.16142C28.7807 7.16201 27.7511 8.19027 27.75 9.4592ZM12.0834 35.2779C10.2157 35.1929 9.20052 34.8818 8.5259 34.619C7.63152 34.2708 6.99337 33.8561 6.32243 33.1861C5.65149 32.5161 5.23617 31.8786 4.88951 30.9843C4.62653 30.31 4.31543 29.2946 4.23053 27.4269C4.13766 25.4078 4.11911 24.8012 4.11911 19.6857C4.11911 14.5701 4.13919 13.9653 4.23053 11.9444C4.31558 10.0768 4.62898 9.06337 4.88951 8.38709C5.23771 7.49274 5.65241 6.85462 6.32243 6.18371C6.99245 5.51279 7.62998 5.09749 8.5259 4.75085C9.20021 4.48788 10.2157 4.17678 12.0834 4.09189C14.1026 3.99902 14.7092 3.98048 19.8226 3.98048C24.9361 3.98048 25.5433 4.00055 27.5642 4.09189C29.4319 4.17694 30.4454 4.49033 31.1217 4.75085C32.0161 5.09749 32.6542 5.51371 33.3251 6.18371C33.9961 6.8537 34.4099 7.49274 34.7581 8.38709C35.021 9.06138 35.3321 10.0768 35.417 11.9444C35.5099 13.9653 35.5285 14.5701 35.5285 19.6857C35.5285 24.8012 35.5099 25.4061 35.417 27.4269C35.332 29.2946 35.0194 30.3097 34.7581 30.9843C34.4099 31.8786 33.9952 32.5167 33.3251 33.1861C32.6551 33.8555 32.0161 34.2708 31.1217 34.619C30.4474 34.8819 29.4319 35.193 27.5642 35.2779C25.545 35.3708 24.9384 35.3893 19.8226 35.3893C14.7069 35.3893 14.102 35.3708 12.0834 35.2779ZM11.9247 0.645671C9.88541 0.738539 8.49188 1.06189 7.2749 1.53542C6.01455 2.02443 4.9476 2.68048 3.88142 3.74494C2.81524 4.80939 2.16085 5.87798 1.67181 7.13828C1.19826 8.35598 0.874899 9.74869 0.782028 11.7879C0.687624 13.8304 0.666016 14.4834 0.666016 19.6855C0.666016 24.8876 0.687624 25.5406 0.782028 27.5831C0.874899 29.6225 1.19826 31.0151 1.67181 32.2328C2.16085 33.4923 2.81539 34.5621 3.88142 35.6261C4.94744 36.6901 6.01455 37.3452 7.2749 37.8356C8.49418 38.3092 9.88541 38.6325 11.9247 38.7254C13.9684 38.8182 14.6203 38.8414 19.8226 38.8414C25.025 38.8414 25.678 38.8198 27.7205 38.7254C29.76 38.6325 31.1526 38.3092 32.3704 37.8356C33.63 37.3452 34.6977 36.6906 35.7639 35.6261C36.83 34.5617 37.4831 33.4923 37.9735 32.2328C38.447 31.0151 38.7719 29.6224 38.8633 27.5831C38.9561 25.5391 38.9777 24.8876 38.9777 19.6855C38.9777 14.4834 38.9561 13.8304 38.8633 11.7879C38.7704 9.74853 38.447 8.35521 37.9735 7.13828C37.4831 5.87874 36.8284 4.81107 35.7639 3.74494C34.6994 2.6788 33.63 2.02443 32.3719 1.53542C31.1526 1.06189 29.7599 0.737006 27.7221 0.645671C25.6795 0.552803 25.0265 0.529663 19.8242 0.529663C14.6218 0.529663 13.9684 0.551271 11.9247 0.645671Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg width="35" height="40" viewBox="0 0 35 40" class="fill-brand" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2_163)">
+                          <path
+                            d="M34.2111 16.6175C30.8891 16.6254 27.6486 15.5894 24.9473 13.6558V27.1414C24.9464 29.6391 24.183 32.0769 22.7591 34.129C21.3353 36.1811 19.3189 37.7496 16.9796 38.6247C14.6402 39.4999 12.0895 39.64 9.66836 39.0264C7.24725 38.4127 5.07118 37.0745 3.43113 35.1907C1.79109 33.307 0.765235 30.9674 0.490746 28.4848C0.216258 26.0023 0.706217 23.4951 1.89511 21.2985C3.084 19.102 4.91516 17.3207 7.14373 16.193C9.3723 15.0652 11.8921 14.6447 14.3661 14.9876V21.7704C13.234 21.4143 12.0183 21.425 10.8926 21.8011C9.76696 22.1771 8.78891 22.8992 8.09813 23.8642C7.40734 24.8293 7.03916 25.9879 7.04615 27.1747C7.05314 28.3615 7.43495 29.5157 8.13705 30.4725C8.83915 31.4294 9.82565 32.1399 10.9557 32.5026C12.0857 32.8654 13.3014 32.8618 14.4292 32.4924C15.5571 32.1229 16.5393 31.4066 17.2358 30.4456C17.9322 29.4846 18.3072 28.3282 18.3072 27.1414V0.778442H24.9473C24.9427 1.33919 24.9897 1.89917 25.0877 2.45131C25.3184 3.68388 25.7982 4.85641 26.4976 5.8972C27.197 6.93799 28.1015 7.82515 29.1555 8.50442C30.6551 9.49599 32.4133 10.0245 34.2111 10.0241V16.6175Z"
+                            fill="fill-brand"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_2_163">
+                            <rect width="33.8045" height="38.6337" transform="translate(0.406738 0.778442)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixed top-0 bottom-0 left-0 right-0 h-screen backdrop-blur z-20 bg-[#03031c99]" x-on:click="menuOpen = !menuOpen"></div>
+    </div>
+  </body>
+</html>

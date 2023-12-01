@@ -1,0 +1,16 @@
+body {
+  /* font-family: "Inter", sans-serif; */
+}
+.bg-brand-dark {
+  background-color: #266e6a;
+}
+.container {
+  max-width: 1400px !important;
+}
+[x-cloak] {
+  display: none;
+}
+
+.page_coffee .page-content {
+  font-size: 65%;
+}
