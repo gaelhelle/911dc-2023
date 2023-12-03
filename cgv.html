@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>911 Delicious Company - Fresh Pizza & Smash Burger All Together</title>
+    <meta name="description" content="Commande vite chez 911® et retrouve le meilleur du SMASH BURGER et de la FRESH PIZZA sur place, en Click & Collect et en livraison. Avec l’appli, rejoins vite le programme de fidélité 911 Family® et retrouve les restos les plus proches et bien plus encore.  Avec le programme de fidélité 911 Family® cumule des points à chaque commande et profite de produits offerts. Tu peux accéder à ta carte et la scanner dans les restaurants en caisse ou sur les bornes. Si tu commandes avec l’appli, alors tes points sont automatiquement crédités sur ta carte ! " />
+
+    <link rel="icon" href="./assets-images/favicon.png" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#318a86",
+              grey: "#f4f4f4",
+            },
+          },
+          container: {
+            padding: "2rem",
+            center: true,
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="assets-css/theme.css" />
+  </head>
+  <body x-data="{ menuOpen: false }" :class=" menuOpen ? 'overflow-hidden h-screen' : ''">
+    <noscript>
+      <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-WQ9L29K" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "../www.googletagmanager.com/gtm5445.html?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WQ9L29K");
+    </script>
+
+    <div class="page">
+      <header class="px-6 md:px-12 py-4 md:py-7 sticky top-0 bg-white z-20 border-b border-gray-200">
+        <div class="flex flex-row items-center justify-between">
+          <a href="./">
+            <img src="./assets/logo.png" alt="Logo 911 Delicious Company" class="w-[140px] md:w-[200px]" />
+          </a>
+          <div class="flex items-center justify-center">
+            <div class="w-[28px] flex flex-col gap-2 cursor-pointer" id="trigger-menu" x-on:click="menuOpen = !menuOpen">
+              <div class="w-full h-[2px] bg-brand"></div>
+              <div class="w-full h-[2px] bg-brand"></div>
+              <div class="w-full h-[2px] bg-brand"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="info-section my-20">
+          <div class="info-section__wrapper">
+            <h2 class="slides-section__title text-3xl font-bold mb-10 text-center">CONDITIONS GÉNÉRALES DE VENTE</h2>
+            <div class="text-lg">
+              <p dir="ltr">&nbsp;</p>
+              <p dir="ltr">SAS 911 Development, 911 Delicious Company France au capital de 10 000 &euro; - RCS Dijon B 887 514 024 - Si&egrave;ge : 2, avenue du g&eacute;n&eacute;ral Canzio, 21240 Talant, France.&nbsp;</p>
+              <p dir="ltr">911 Delicious Company est une soci&eacute;t&eacute; de services exploitant un r&eacute;seau de restauration rapide et vente d&rsquo;aliments &agrave; emporter, compos&eacute; de magasins franchis&eacute;s et de succursales. Le franchis&eacute; ou la succursale dont d&eacute;pend chaque commande est appel&eacute; &laquo; le Magasin &raquo; pour la suite des pr&eacute;sentes.</p>
+              <p dir="ltr">La relation entre le Client et le Magasin peut s&rsquo;effectuer par l&rsquo;interm&eacute;diaire des coordonn&eacute;es &eacute;lectroniques, t&eacute;l&eacute;phoniques et postales indiqu&eacute;es sur le bon de commande et sur le courrier &eacute;lectronique de confirmation de commande.</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">&nbsp;</h3>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">1. APPLICATION DES CONDITIONS GENERALES - OPPOSABILITE</h3>
+              <p dir="ltr">Les pr&eacute;sentes conditions g&eacute;n&eacute;rales de vente s&rsquo;appliquent aux commandes r&eacute;alis&eacute;es sur le site h&eacute;berg&eacute; &agrave; l&rsquo;adresse http://www.911dc.com/ (ci-apr&egrave;s le Site). Le Client d&eacute;clare &ecirc;tre majeur et avoir la pleine capacit&eacute; juridique lui permettant de s&rsquo;engager au titre des pr&eacute;sentes. Le client reconna&icirc;t avoir pris connaissance, au moment de la passation de commande, des pr&eacute;sentes conditions g&eacute;n&eacute;rales de vente. Toute passation de commande vaut acceptation des pr&eacute;sentes conditions g&eacute;n&eacute;rales sans aucune r&eacute;serve. Les pr&eacute;sentes conditions g&eacute;n&eacute;rales de vente r&eacute;gissent les relations contractuelles entre le Magasin 911 Delicious Company choisi et le Client, les deux parties les acceptant sans r&eacute;serve.</p>
+              <p>&nbsp;</p>
+              <p dir="ltr">
+                Ces conditions g&eacute;n&eacute;rales de vente pr&eacute;vaudront sur toutes autres conditions figurant dans tout autre document, sauf d&eacute;rogation pr&eacute;alable, expresse et &eacute;crite. Les conditions g&eacute;n&eacute;rales applicables sont celles en vigueur &agrave; la date de la commande par l&rsquo;acheteur et peuvent &ecirc;tre modifi&eacute;es &agrave; tout moment et sans pr&eacute;avis. La validation de la commande vaut signature et acceptation expresse de toutes les op&eacute;rations effectu&eacute;es sur le site. Quand vous cochez la case confirmant que vous avez pris connaissance des conditions de vente et que vous cliquez sur le bouton de validation &laquo;Valider votre commande &raquo; apr&egrave;s le processus de commande, vous d&eacute;clarez accepter l&rsquo;int&eacute;gralit&eacute; des pr&eacute;sentes Conditions G&eacute;n&eacute;rales de Vente pleinement et sans r&eacute;serve. Les donn&eacute;es enregistr&eacute;es par le Site
+                constituent la preuve de l&rsquo;ensemble des transactions pass&eacute;es par le Magasin 911 Delicious Company concern&eacute;e et ses clients.
+              </p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">2. TERRITOIRE</h3>
+              <p dir="ltr">Les offres d&rsquo;achat pr&eacute;sentes sur le Site sont r&eacute;serv&eacute;es uniquement au territoire fran&ccedil;ais et aux consommateurs des seules zones disposant de magasins 911 Delicious Company&nbsp;dans un rayon d&rsquo;environ 3 km.</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">3. COMMANDES</h3>
+              <p dir="ltr">Les informations communiqu&eacute;es par le client lors de la prise de commande l&rsquo;engagent et toute erreur dans le libell&eacute; de la commande ou dans les coordonn&eacute;es du destinataire rel&egrave;ve de sa responsabilit&eacute; exclusive. Pr&eacute;alablement &agrave; toute validation de sa commande, le Client aura les moyens techniques d&rsquo;identifier les erreurs commises dans la saisie des donn&eacute;es et de les corriger, en revenant sur les diff&eacute;rentes &eacute;tapes du processus de commande et pourra de la m&ecirc;me mani&egrave;re modifier le contenu de celle-ci en ajoutant ou en retirant des produits de son panier, depuis la page web r&eacute;capitulant le contenu du panier avant validation de la commande. Il suffira le cas &eacute;ch&eacute;ant au Client d&rsquo;indiquer quel(s) article(s) il souhaite supprimer de son panier avant de valider sa commande.&nbsp;</p>
+              <p dir="ltr">Une fois cette v&eacute;rification effectu&eacute;e, le Client est invit&eacute; &agrave; valider sa commande et accepter les pr&eacute;sentes conditions g&eacute;n&eacute;rales de vente. Les commandes sont effectives d&egrave;s cette validation effectu&eacute;e. Toute commande ainsi pass&eacute;e est d&eacute;finitive et ne peut &ecirc;tre annul&eacute;e, et la personne est tenue de payer sa commande lors de la livraison ou lors du retrait en magasin.&nbsp;</p>
+              <p dir="ltr">En cas de non retrait d&rsquo;une commande valablement pass&eacute;e et non pay&eacute;e, le Magasin signalera l&rsquo;incident &agrave; 911 Delicious Company&nbsp;France. Le client pourra alors se voir refuser la possibilit&eacute;, lors de ses prochaines visites sur le site, de diff&eacute;rer le paiement de la commande au moment de son retrait en magasin ou en livraison. Le client sera imm&eacute;diatement inform&eacute; de la restriction dont fait l&rsquo;objet son compte par courrier &eacute;lectronique et il lui sera laiss&eacute; la possibilit&eacute; de se justifier du non retrait de la commande litigieuse. Au bout de 2 commandes valablement pay&eacute;es sur le Site, le client retrouvera la possibilit&eacute; de payer lors du retrait en magasin.&nbsp;</p>
+              <p dir="ltr">Le Client recevra automatiquement par e-mail, une confirmation &eacute;crite de la commande comportant l&rsquo;ensemble des informations relatives aux caract&eacute;ristiques du produit qui lui auront &eacute;t&eacute; transmises au stade de la commande, ainsi que le prix total de la commande toutes taxes comprises, et le montant de la TVA.</p>
+              <p dir="ltr">&nbsp;</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">4. ARCHIVAGE</h3>
+              <p dir="ltr">Un enregistrement automatique des messages &eacute;lectroniques de confirmation de commande adress&eacute;s au client sera effectu&eacute; au sein des syst&egrave;mes informatiques composant la plate-forme de commerce &eacute;lectronique, g&eacute;r&eacute;e et administr&eacute;e par la soci&eacute;t&eacute; 911 Delicious Company&nbsp;France sur laquelle repose la mise en &oelig;uvre du processus de transaction &eacute;lectronique. Le Client est invit&eacute; &agrave; conserver lui-m&ecirc;me une copie de ladite confirmation sur tout support durable appropri&eacute; et/ou &agrave; en effectuer une impression.</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">5. DROIT DE RETRACTATION</h3>
+              <p dir="ltr">Selon les dispositions de l'article L. 221-28 alin&eacute;a 4 du Code de la Consommation, le droit de r&eacute;tractation applicable en mati&egrave;re de vente &agrave; distance ne peut &ecirc;tre exerc&eacute; dans le cas de la fourniture de biens qui du fait de leur nature sont susceptibles de se d&eacute;t&eacute;riorer ou de se p&eacute;rimer rapidement.</p>
+              <p dir="ltr">En application de ce texte, le client ne dispose pas du d&eacute;lai de 14 jours pour exercer son droit de r&eacute;traction, toute commande sur le Site &eacute;tant ferme et d&eacute;finitive.</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">6. RECLAMATIONS</h3>
+              <p dir="ltr">911 Delicious Company est une franchise dont le r&eacute;seau est constitu&eacute; de commer&ccedil;ants ind&eacute;pendants. Aussi une fois le contenu de son panier valid&eacute; et sa commande confirm&eacute;e, la confirmation de commande d&eacute;livr&eacute;e au Client portera indication des coordonn&eacute;es du vendeur des produits consid&eacute;r&eacute;s ayant en charge de r&eacute;aliser et d&eacute;livrer la commande. Toute r&eacute;clamation concernant les produits objets de la commande devra &ecirc;tre effectu&eacute;e &agrave; l&rsquo;adresse du magasin 911 Delicious Company&nbsp;figurant sur la confirmation de commande.</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">7. OFFRES</h3>
+              <p dir="ltr">Toute offre de vente s&rsquo;entend sous r&eacute;serve des stocks disponibles. La disponibilit&eacute; des produits est effectu&eacute;e en temps r&eacute;el avant la validation de la commande. N&eacute;anmoins, en cas d&rsquo;indisponibilit&eacute; d&rsquo;un produit (notamment un ingr&eacute;dient), le Client sera directement contact&eacute; par t&eacute;l&eacute;phone par le magasin afin de trouver une solution de remplacement ou de proc&eacute;der &agrave; l&rsquo;annulation de la commande.&nbsp;</p>
+              <p dir="ltr">Les produits propos&eacute;s sont conformes &agrave; la l&eacute;gislation fran&ccedil;aise et communautaire en vigueur.</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">8. LIVRAISON</h3>
+              <p dir="ltr">Les informations &eacute;nonc&eacute;es par le Client lors de la prise de commande engagent celui-ci : en cas d&rsquo;erreur dans le libell&eacute; des coordonn&eacute;es du destinataire, le magasin 911 Delicious Company&nbsp;ne saurait &ecirc;tre tenu responsable de l&rsquo;impossibilit&eacute; dans laquelle il pourrait &ecirc;tre de livrer le produit.</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">9. DELAI DE LIVRAISON</h3>
+              <p dir="ltr">Le magasin s&rsquo;engage &agrave; respecter les d&eacute;lais annonc&eacute;s. Si n&eacute;anmoins votre livraison ou la pr&eacute;paration de votre pizza &eacute;tait soumise &agrave; un retard exc&eacute;dant 45 minutes (en comparaison du d&eacute;lai annonc&eacute;, de l&rsquo;heure de livraison ou de l&rsquo;heure de disponibilit&eacute;), nous vous invitons &agrave; contacter le magasin dont les coordonn&eacute;es figurent sur la confirmation de votre commande. Vous &ecirc;tes de plus libre, pass&eacute; ce d&eacute;lai, d&rsquo;informer le magasin de votre souhait d&rsquo;annuler la commande.</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">10. PRIX</h3>
+              <p dir="ltr">Les prix affich&eacute;s sur les Services en ligne peuvent varier d&rsquo;un magasin 911 Delicious Company&nbsp;&agrave; l&rsquo;autre.</p>
+              <p dir="ltr">Les prix applicables sont ceux en vigueur au moment de la Commande du Client, tels qu&rsquo;affich&eacute;s sur les Services en ligne du Magasin concern&eacute; par la Commande. Le Client sera inform&eacute; des prix applicables avant de payer sa Commande.</p>
+              <p dir="ltr">Les prix affich&eacute;s sur les Services en ligne sont exprim&eacute;s en Euros TTC (toutes taxes comprises) et tiennent compte des taux de TVA applicables au jour de la Commande, &agrave; savoir&nbsp;:</p>
+              <div class="relative overflow-x-auto mt-4 mb-4">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border-collapse border border-slate-200">
+                  <colgroup>
+                    <col width="233" />
+                    <col width="91" />
+                    <col width="123" />
+                    <col width="196" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td class="border border-slate-200 p-4">&nbsp;</td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">Livraisons</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">Ventes &agrave; emporter</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">Ventes &agrave; consommer sur place</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">Pizzas et Burgers</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">Salades</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">Boissons&nbsp;</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">5,5&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">5,5&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">Glaces en pot individuel (contenance&nbsp; inf&eacute;rieure &agrave; 200 ml)</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">Glaces en pot familial (contenance sup&eacute;rieure ou &eacute;gale &agrave; 200 ml)</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">5,5&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">5,5&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">P&acirc;tisseries</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">5,5&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">5,5&nbsp;%</p>
+                      </td>
+                      <td class="border border-slate-200 p-4">
+                        <p dir="ltr">10&nbsp;%</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>&nbsp;</p>
+              <p dir="ltr">Tout changement des taux de la TVA pourra &ecirc;tre r&eacute;percut&eacute; sur les prix des Produits.</p>
+              <p dir="ltr">Certains magasins facturent des frais suppl&eacute;mentaires au titre des frais de livraison. Les frais de livraison s&rsquo;ajoutent aux prix des produits livr&eacute;s et s&rsquo;affichent dans la Commande sous le libell&eacute; &laquo;&nbsp;Frais de livraison &raquo;.&nbsp;</p>
+              <p dir="ltr">Le Magasin se r&eacute;serve le droit de modifier ses prix &agrave; tout moment.&nbsp;</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">11. RESPONSABILITE</h3>
+              <p dir="ltr">911 Delicious Company&nbsp;France d&eacute;gage toute responsabilit&eacute; quant &agrave; l&rsquo;usage ou au contenu des produits command&eacute;s sur le Site.&nbsp;</p>
+              <p dir="ltr">
+                Les photographies et les textes reproduits sur le Site le sont &agrave; titre purement indicatif et ne sauraient avoir une valeur contractuelle. La responsabilit&eacute; de 911 Delicious Company France ou des magasins franchis&eacute;s ne saurait &ecirc;tre engag&eacute;e si une erreur s&rsquo;est gliss&eacute;e dans l&rsquo;une de ces photographies ou l&rsquo;un de ces textes. 911 Delicious Company&nbsp;France ou des magasins franchis&eacute;s ne sauraient &ecirc;tre tenus pour responsables de l&rsquo;inex&eacute;cution du contrat conclu en cas de carence du magasin ou de force majeure. Si la responsabilit&eacute; de 911 Delicious Company&nbsp;France ou des magasins franchis&eacute;s d&eacute;coulant directement ou indirectement du pr&eacute;sent contrat, venait &agrave; &ecirc;tre engag&eacute;e, le montant des dommages et int&eacute;r&ecirc;ts qu&rsquo;ils pourraient &ecirc;tre condamn&eacute;s &agrave; verser serait express&eacute;ment limit&eacute; au montant du
+                prix pay&eacute; par le Client pour les produits se trouvant &agrave; l&rsquo;origine du pr&eacute;judice. Le Client est tenu, en tout &eacute;tat de cause, de faire toutes les diligences n&eacute;cessaires afin de diminuer le pr&eacute;judice subi.
+              </p>
+              <p dir="ltr">&nbsp;</p>
+              <p dir="ltr">La structure g&eacute;n&eacute;rale du Site, ainsi que l'ensemble des &eacute;l&eacute;ments figurant sur le Site, constituent des &oelig;uvres qui sont prot&eacute;g&eacute;es en tant que telles par les lois sur la propri&eacute;t&eacute; intellectuelle, en particulier par le droit d&rsquo;auteur, les dessins et mod&egrave;les et le droit des marques, et par les trait&eacute;s internationaux.</p>
+              <p dir="ltr">Il est formellement interdit de collecter, utiliser, copier, distribuer, afficher, reproduire ou transmettre, totalement ou partiellement, sous quelque forme et par quelque moyen que ce soit, les &eacute;l&eacute;ments figurant sur le Site, notamment &agrave; des fins commerciales.</p>
+              <p dir="ltr">Cette interdiction s'&eacute;tend notamment, sans que cette liste ne soit limitative, aux textes, scripts, pr&eacute;sentation des &eacute;crans, logiciels, marques et logos, images, photos, graphiques, concepts, sons, musique, vid&eacute;os ou fonctionnalit&eacute;s interactives.</p>
+              <p dir="ltr">Toute personne qui t&eacute;l&eacute;charge ou recueille des informations diffus&eacute;es sur le Site ne dispose sur celles-ci que d&rsquo;un droit d&rsquo;usage priv&eacute;, personnel et non transmissible et s&rsquo;engage &agrave; ne pas les modifier.&nbsp;</p>
+              <p dir="ltr">Toute autre utilisation non express&eacute;ment autoris&eacute;e par &eacute;crit par 911 Delicious Company France est strictement interdite.</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">12. VIE PRIVEE</h3>
+              <p dir="ltr">Les donn&eacute;es personnelles collect&eacute;es sur le Site sont soumises &agrave; la politique de protection des donn&eacute;es personnelles de 911 Delicious Company&nbsp;France que nous vous invitons &agrave; consulter prochainement.</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">13. MOYENS DE PAIEMENT ACCEPTES</h3>
+              <p dir="ltr">Lors du retrait de la commande ou de sa livraison, les moyens de paiement accept&eacute;s sont les suivants :</p>
+              <p dir="ltr">- en magasin :</p>
+              <p dir="ltr">Carte Bancaire.</p>
+              <p dir="ltr">Titres restaurant.</p>
+              <p dir="ltr">Esp&egrave;ces.</p>
+              <p dir="ltr">- au livreur :</p>
+              <p dir="ltr">Carte Bancaire.</p>
+              <p dir="ltr">Titres restaurant.</p>
+              <p dir="ltr">Esp&egrave;ces.</p>
+              <p dir="ltr">Minimum de commande sur la commande en ligne en livraison : 10&euro;TTC</p>
+              <p dir="ltr">Seuls les paiements en euros sont accept&eacute;s.</p>
+              <p dir="ltr">Par mesure de s&eacute;curit&eacute;, nos livreurs ne sont pas r&eacute;mun&eacute;r&eacute;s &agrave; la course, ni p&eacute;nalis&eacute;s en cas de retard et sont en possession de moins de 15&euro;.</p>
+              <p dir="ltr">Il n'est pas possible de commander uniquement des boissons ou des glaces Ben &amp; Jerry's en livraison sur la commande en ligne.</p>
+              <p dir="ltr">&nbsp;</p>
+              <h3 class="uppercase font-bold mb-4 mt-6" dir="ltr">14. LOI APPLICABLE</h3>
+              <p dir="ltr">Les pr&eacute;sentes conditions g&eacute;n&eacute;rales de prestation de services sont soumises &agrave; la loi fran&ccedil;aise et l&rsquo;ensemble de ses clauses doit &ecirc;tre interpr&eacute;t&eacute; selon le droit fran&ccedil;ais.</p>
+              <p dir="ltr">Certains magasins du r&eacute;seau 911 Delicious Company&nbsp;facturent des frais suppl&eacute;mentaires au titre des frais de livraison. Les frais de livraison s&rsquo;ajoutent aux prix des produits livr&eacute;s et s&rsquo;affichent dans la Commande sous le libell&eacute; &laquo; Frais de livraison &raquo;&nbsp;</p>
+              <p dir="ltr">Tarifs, zones et conditions de livraison : <a title="conditions de livraison" href="conditions_de_livraison" target="_blank" rel="noopener">ici</a></p>
+              <p dir="ltr">Dans la limite des stocks disponibles.&nbsp; Visuels non contractuels. Exemples de pr&eacute;sentation.&nbsp;</p>
+              <p dir="ltr">Par s&eacute;curit&eacute;, nos livreurs ne sont pas r&eacute;mun&eacute;r&eacute;s &agrave; la course ni p&eacute;nalis&eacute;s en cas de retard, et sont en possession de moins de 15&euro;. Merci de noter que certains coupons ne sont pas pris en compte sur Internet.&nbsp;</p>
+              <p><br /><br /></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bg-[#202837] text-white py-14 pb-32 md:pb-14">
+        <div class="container">
+          <div class="flex flex-col-reverse md:flex-row items-center gap-20 justify-between">
+            <div class="flex-1 w-full">
+              <a href="./index.html" class="font-bold mb-4 inline-block">911 Delicious Company</a>
+              <nav class="font-light">
+                <ul class="grid grid-cols-2 gap-2 max-w-[400px]">
+                  <li><a href="./le-concept.html" class="hover:underline">Concept</a></li>
+                  <li><a href="./history.html" class="hover:underline">History</a></li>
+                  <li><a href="./coffee.html" class="hover:underline">911 Coffee</a></li>
+                  <li><a href="./junior.html" class="hover:underline">911 Junior</a></li>
+                  <li><a href="./delicious-halal.html" class="hover:underline">Delicious & Halal</a></li>
+                  <li><a href="https://franchise.911dc.com/" class="hover:underline">Devenir franchisé</a></li>
+                  <li><a href="https://911family.zerosix.com/" class="hover:underline"> Espace fidelité</a></li>
+                </ul>
+              </nav>
+              <nav class="font-light">
+                <ul class="flex flex-row space-x-10 mt-8">
+                  <li><a href="./conditions-de-livraison.html" class="hover:underline">Conditions de livraison</a></li>
+                  <li><a href="./cgv.html" class="hover:underline">CGV</a></li>
+                  <li><a href="./mentions-legales.html" class="hover:underline">Mention légales</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="flex-1">
+              <ul class="flex gap-8 items-center justify-center">
+                <li>
+                  <a href="https://www.facebook.com/911dcfrance" class="hover:opacity-80">
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M42 21C42 9.40078 32.5992 0 21 0C9.40078 0 0 9.40078 0 21C0 31.4828 7.67484 40.1707 17.7204 41.7465V27.0752H12.3925V21H17.7204V16.3743C17.7204 11.1152 20.8499 8.20477 25.6487 8.20477C27.9497 8.20477 30.3548 8.61902 30.3548 8.61902V13.7854H27.7085C25.0966 13.7854 24.2911 15.4079 24.2911 17.065V21H30.1137L29.1818 27.0752H24.2911V41.7465C34.3252 40.1707 42 31.4828 42 21Z" fill="white" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/911dcfrance/" class="hover:opacity-80">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.4381 19.6855C13.4381 16.1592 16.2961 13.2997 19.8226 13.2997C23.3491 13.2997 26.2087 16.1592 26.2087 19.6855C26.2087 23.2119 23.3491 26.0713 19.8226 26.0713C16.2961 26.0713 13.4381 23.2119 13.4381 19.6855ZM9.98594 19.6855C9.98594 25.1181 14.3898 29.5218 19.8226 29.5218C25.2555 29.5218 29.6593 25.1181 29.6593 19.6855C29.6593 14.2529 25.2555 9.84922 19.8226 9.84922C14.3898 9.84922 9.98594 14.2529 9.98594 19.6855ZM27.75 9.4592C27.7494 10.7287 28.7782 11.7583 30.0478 11.7588C31.3174 11.7593 32.347 10.7306 32.3475 9.46104C32.3481 8.1915 31.3193 7.16193 30.0497 7.16142C28.7807 7.16201 27.7511 8.19027 27.75 9.4592ZM12.0834 35.2779C10.2157 35.1929 9.20052 34.8818 8.5259 34.619C7.63152 34.2708 6.99337 33.8561 6.32243 33.1861C5.65149 32.5161 5.23617 31.8786 4.88951 30.9843C4.62653 30.31 4.31543 29.2946 4.23053 27.4269C4.13766 25.4078 4.11911 24.8012 4.11911 19.6857C4.11911 14.5701 4.13919 13.9653 4.23053 11.9444C4.31558 10.0768 4.62898 9.06337 4.88951 8.38709C5.23771 7.49274 5.65241 6.85462 6.32243 6.18371C6.99245 5.51279 7.62998 5.09749 8.5259 4.75085C9.20021 4.48788 10.2157 4.17678 12.0834 4.09189C14.1026 3.99902 14.7092 3.98048 19.8226 3.98048C24.9361 3.98048 25.5433 4.00055 27.5642 4.09189C29.4319 4.17694 30.4454 4.49033 31.1217 4.75085C32.0161 5.09749 32.6542 5.51371 33.3251 6.18371C33.9961 6.8537 34.4099 7.49274 34.7581 8.38709C35.021 9.06138 35.3321 10.0768 35.417 11.9444C35.5099 13.9653 35.5285 14.5701 35.5285 19.6857C35.5285 24.8012 35.5099 25.4061 35.417 27.4269C35.332 29.2946 35.0194 30.3097 34.7581 30.9843C34.4099 31.8786 33.9952 32.5167 33.3251 33.1861C32.6551 33.8555 32.0161 34.2708 31.1217 34.619C30.4474 34.8819 29.4319 35.193 27.5642 35.2779C25.545 35.3708 24.9384 35.3893 19.8226 35.3893C14.7069 35.3893 14.102 35.3708 12.0834 35.2779ZM11.9247 0.645671C9.88541 0.738539 8.49188 1.06189 7.2749 1.53542C6.01455 2.02443 4.9476 2.68048 3.88142 3.74494C2.81524 4.80939 2.16085 5.87798 1.67181 7.13828C1.19826 8.35598 0.874899 9.74869 0.782028 11.7879C0.687624 13.8304 0.666016 14.4834 0.666016 19.6855C0.666016 24.8876 0.687624 25.5406 0.782028 27.5831C0.874899 29.6225 1.19826 31.0151 1.67181 32.2328C2.16085 33.4923 2.81539 34.5621 3.88142 35.6261C4.94744 36.6901 6.01455 37.3452 7.2749 37.8356C8.49418 38.3092 9.88541 38.6325 11.9247 38.7254C13.9684 38.8182 14.6203 38.8414 19.8226 38.8414C25.025 38.8414 25.678 38.8198 27.7205 38.7254C29.76 38.6325 31.1526 38.3092 32.3704 37.8356C33.63 37.3452 34.6977 36.6906 35.7639 35.6261C36.83 34.5617 37.4831 33.4923 37.9735 32.2328C38.447 31.0151 38.7719 29.6224 38.8633 27.5831C38.9561 25.5391 38.9777 24.8876 38.9777 19.6855C38.9777 14.4834 38.9561 13.8304 38.8633 11.7879C38.7704 9.74853 38.447 8.35521 37.9735 7.13828C37.4831 5.87874 36.8284 4.81107 35.7639 3.74494C34.6994 2.6788 33.63 2.02443 32.3719 1.53542C31.1526 1.06189 29.7599 0.737006 27.7221 0.645671C25.6795 0.552803 25.0265 0.529663 19.8242 0.529663C14.6218 0.529663 13.9684 0.551271 11.9247 0.645671Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@911dcfrance" class="hover:opacity-80">
+                    <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2_163)">
+                        <path
+                          d="M34.2111 16.6175C30.8891 16.6254 27.6486 15.5894 24.9473 13.6558V27.1414C24.9464 29.6391 24.183 32.0769 22.7591 34.129C21.3353 36.1811 19.3189 37.7496 16.9796 38.6247C14.6402 39.4999 12.0895 39.64 9.66836 39.0264C7.24725 38.4127 5.07118 37.0745 3.43113 35.1907C1.79109 33.307 0.765235 30.9674 0.490746 28.4848C0.216258 26.0023 0.706217 23.4951 1.89511 21.2985C3.084 19.102 4.91516 17.3207 7.14373 16.193C9.3723 15.0652 11.8921 14.6447 14.3661 14.9876V21.7704C13.234 21.4143 12.0183 21.425 10.8926 21.8011C9.76696 22.1771 8.78891 22.8992 8.09813 23.8642C7.40734 24.8293 7.03916 25.9879 7.04615 27.1747C7.05314 28.3615 7.43495 29.5157 8.13705 30.4725C8.83915 31.4294 9.82565 32.1399 10.9557 32.5026C12.0857 32.8654 13.3014 32.8618 14.4292 32.4924C15.5571 32.1229 16.5393 31.4066 17.2358 30.4456C17.9322 29.4846 18.3072 28.3282 18.3072 27.1414V0.778442H24.9473C24.9427 1.33919 24.9897 1.89917 25.0877 2.45131C25.3184 3.68388 25.7982 4.85641 26.4976 5.8972C27.197 6.93799 28.1015 7.82515 29.1555 8.50442C30.6551 9.49599 32.4133 10.0245 34.2111 10.0241V16.6175Z"
+                          fill="white"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2_163">
+                          <rect width="33.8045" height="38.6337" fill="white" transform="translate(0.406738 0.778442)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div x-cloak x-show="menuOpen">
+      <div class="fixed top-0 bottom-0 right-0 w-3/4 lg:w-[400px] bg-white z-30 p-4" x-show="menuOpen" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-x-10" x-transition:enter-end="opacity-100 translate-x-0">
+        <div class="flex flex-col h-screen overflow-y-auto pb-16">
+          <div class="flex item-center justify-between mb-6">
+            <div>
+              <a href="./">
+                <img src="./assets/logo.png" alt="Logo 911 Delicious Company" class="w-[140px]" />
+              </a>
+            </div>
+            <div x-on:click="menuOpen = !menuOpen" class="flex items-center justify-center cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18L18 6M6 6L18 18" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <span class="uppercase text-brand font-bold text-xl rounded-xl block px-4 py-2.5 cursor-default">Nice to meet you</span>
+                  <ul class="pl-10">
+                    <li><a href="./le-concept.html" class="text-brand font-bold text-lg hover:bg-gray-100 rounded-xl block p-2 px-4">Concept</a></li>
+                    <li><a href="./history.html" class="text-brand font-bold text-lg hover:bg-gray-100 rounded-xl block p-2 px-4">History</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://franchise.911dc.com/" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">Devenir franchisé</a></li>
+                <li><a href="./coffee.html" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">911 coffee</a></li>
+                <li><a href="./junior.html" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">911 junior</a></li>
+                <li><a href="./delicious-halal.html" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">Delicious & halal</a></li>
+                <li><a href="https://911family.zerosix.com/" class="uppercase text-brand font-bold text-xl hover:bg-gray-100 rounded-xl block px-4 py-2.5">Espace fidelité</a></li>
+              </ul>
+            </nav>
+            <div class="text-center mt-6">
+              <a href="https://commander.911dc.com/fr" class="bg-brand text-white rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 inline-block">Commander</a>
+            </div>
+            <div class="-mx-10">
+              <div class="mt-6 p-4">
+                <ul class="flex gap-8 items-center justify-center">
+                  <li>
+                    <a href="https://www.facebook.com/911dcfrance" class="hover:opacity-80">
+                      <svg width="42" height="42" viewBox="0 0 42 42" class="fill-brand" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M42 21C42 9.40078 32.5992 0 21 0C9.40078 0 0 9.40078 0 21C0 31.4828 7.67484 40.1707 17.7204 41.7465V27.0752H12.3925V21H17.7204V16.3743C17.7204 11.1152 20.8499 8.20477 25.6487 8.20477C27.9497 8.20477 30.3548 8.61902 30.3548 8.61902V13.7854H27.7085C25.0966 13.7854 24.2911 15.4079 24.2911 17.065V21H30.1137L29.1818 27.0752H24.2911V41.7465C34.3252 40.1707 42 31.4828 42 21Z" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/911dcfrance/" class="hover:opacity-80">
+                      <svg width="39" height="39" viewBox="0 0 39 39" class="fill-brand" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.4381 19.6855C13.4381 16.1592 16.2961 13.2997 19.8226 13.2997C23.3491 13.2997 26.2087 16.1592 26.2087 19.6855C26.2087 23.2119 23.3491 26.0713 19.8226 26.0713C16.2961 26.0713 13.4381 23.2119 13.4381 19.6855ZM9.98594 19.6855C9.98594 25.1181 14.3898 29.5218 19.8226 29.5218C25.2555 29.5218 29.6593 25.1181 29.6593 19.6855C29.6593 14.2529 25.2555 9.84922 19.8226 9.84922C14.3898 9.84922 9.98594 14.2529 9.98594 19.6855ZM27.75 9.4592C27.7494 10.7287 28.7782 11.7583 30.0478 11.7588C31.3174 11.7593 32.347 10.7306 32.3475 9.46104C32.3481 8.1915 31.3193 7.16193 30.0497 7.16142C28.7807 7.16201 27.7511 8.19027 27.75 9.4592ZM12.0834 35.2779C10.2157 35.1929 9.20052 34.8818 8.5259 34.619C7.63152 34.2708 6.99337 33.8561 6.32243 33.1861C5.65149 32.5161 5.23617 31.8786 4.88951 30.9843C4.62653 30.31 4.31543 29.2946 4.23053 27.4269C4.13766 25.4078 4.11911 24.8012 4.11911 19.6857C4.11911 14.5701 4.13919 13.9653 4.23053 11.9444C4.31558 10.0768 4.62898 9.06337 4.88951 8.38709C5.23771 7.49274 5.65241 6.85462 6.32243 6.18371C6.99245 5.51279 7.62998 5.09749 8.5259 4.75085C9.20021 4.48788 10.2157 4.17678 12.0834 4.09189C14.1026 3.99902 14.7092 3.98048 19.8226 3.98048C24.9361 3.98048 25.5433 4.00055 27.5642 4.09189C29.4319 4.17694 30.4454 4.49033 31.1217 4.75085C32.0161 5.09749 32.6542 5.51371 33.3251 6.18371C33.9961 6.8537 34.4099 7.49274 34.7581 8.38709C35.021 9.06138 35.3321 10.0768 35.417 11.9444C35.5099 13.9653 35.5285 14.5701 35.5285 19.6857C35.5285 24.8012 35.5099 25.4061 35.417 27.4269C35.332 29.2946 35.0194 30.3097 34.7581 30.9843C34.4099 31.8786 33.9952 32.5167 33.3251 33.1861C32.6551 33.8555 32.0161 34.2708 31.1217 34.619C30.4474 34.8819 29.4319 35.193 27.5642 35.2779C25.545 35.3708 24.9384 35.3893 19.8226 35.3893C14.7069 35.3893 14.102 35.3708 12.0834 35.2779ZM11.9247 0.645671C9.88541 0.738539 8.49188 1.06189 7.2749 1.53542C6.01455 2.02443 4.9476 2.68048 3.88142 3.74494C2.81524 4.80939 2.16085 5.87798 1.67181 7.13828C1.19826 8.35598 0.874899 9.74869 0.782028 11.7879C0.687624 13.8304 0.666016 14.4834 0.666016 19.6855C0.666016 24.8876 0.687624 25.5406 0.782028 27.5831C0.874899 29.6225 1.19826 31.0151 1.67181 32.2328C2.16085 33.4923 2.81539 34.5621 3.88142 35.6261C4.94744 36.6901 6.01455 37.3452 7.2749 37.8356C8.49418 38.3092 9.88541 38.6325 11.9247 38.7254C13.9684 38.8182 14.6203 38.8414 19.8226 38.8414C25.025 38.8414 25.678 38.8198 27.7205 38.7254C29.76 38.6325 31.1526 38.3092 32.3704 37.8356C33.63 37.3452 34.6977 36.6906 35.7639 35.6261C36.83 34.5617 37.4831 33.4923 37.9735 32.2328C38.447 31.0151 38.7719 29.6224 38.8633 27.5831C38.9561 25.5391 38.9777 24.8876 38.9777 19.6855C38.9777 14.4834 38.9561 13.8304 38.8633 11.7879C38.7704 9.74853 38.447 8.35521 37.9735 7.13828C37.4831 5.87874 36.8284 4.81107 35.7639 3.74494C34.6994 2.6788 33.63 2.02443 32.3719 1.53542C31.1526 1.06189 29.7599 0.737006 27.7221 0.645671C25.6795 0.552803 25.0265 0.529663 19.8242 0.529663C14.6218 0.529663 13.9684 0.551271 11.9247 0.645671Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.tiktok.com/@911dcfrance" class="hover:opacity-80">
+                      <svg width="35" height="40" viewBox="0 0 35 40" class="fill-brand" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2_163)">
+                          <path
+                            d="M34.2111 16.6175C30.8891 16.6254 27.6486 15.5894 24.9473 13.6558V27.1414C24.9464 29.6391 24.183 32.0769 22.7591 34.129C21.3353 36.1811 19.3189 37.7496 16.9796 38.6247C14.6402 39.4999 12.0895 39.64 9.66836 39.0264C7.24725 38.4127 5.07118 37.0745 3.43113 35.1907C1.79109 33.307 0.765235 30.9674 0.490746 28.4848C0.216258 26.0023 0.706217 23.4951 1.89511 21.2985C3.084 19.102 4.91516 17.3207 7.14373 16.193C9.3723 15.0652 11.8921 14.6447 14.3661 14.9876V21.7704C13.234 21.4143 12.0183 21.425 10.8926 21.8011C9.76696 22.1771 8.78891 22.8992 8.09813 23.8642C7.40734 24.8293 7.03916 25.9879 7.04615 27.1747C7.05314 28.3615 7.43495 29.5157 8.13705 30.4725C8.83915 31.4294 9.82565 32.1399 10.9557 32.5026C12.0857 32.8654 13.3014 32.8618 14.4292 32.4924C15.5571 32.1229 16.5393 31.4066 17.2358 30.4456C17.9322 29.4846 18.3072 28.3282 18.3072 27.1414V0.778442H24.9473C24.9427 1.33919 24.9897 1.89917 25.0877 2.45131C25.3184 3.68388 25.7982 4.85641 26.4976 5.8972C27.197 6.93799 28.1015 7.82515 29.1555 8.50442C30.6551 9.49599 32.4133 10.0245 34.2111 10.0241V16.6175Z"
+                            fill="fill-brand"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_2_163">
+                            <rect width="33.8045" height="38.6337" transform="translate(0.406738 0.778442)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixed top-0 bottom-0 left-0 right-0 h-screen backdrop-blur z-20 bg-[#03031c99]" x-on:click="menuOpen = !menuOpen"></div>
+    </div>
+  </body>
+</html>

@@ -3,14 +3,54 @@
   <head>
     <meta charset="UTF-8" />
 
-    <title>911 Delicious Company - Fresh Pizza & Smash Burger All Together</title>
-    <meta name="description" content="Commande vite chez 911® et retrouve le meilleur du SMASH BURGER et de la FRESH PIZZA sur place, en Click & Collect et en livraison. Avec l’appli, rejoins vite le programme de fidélité 911 Family® et retrouve les restos les plus proches et bien plus encore.  Avec le programme de fidélité 911 Family® cumule des points à chaque commande et profite de produits offerts. Tu peux accéder à ta carte et la scanner dans les restaurants en caisse ou sur les bornes. Si tu commandes avec l’appli, alors tes points sont automatiquement crédités sur ta carte ! " />
+    <title>911 Delicious Company - Fresh Pizza &amp; Smash Burger All Together</title>
+    <meta name="description" content="Commande vite chez 911® et retrouve le meilleur du SMASH BURGER et de la FRESH PIZZA sur place, en Click &amp; Collect et en livraison. Avec l’appli, rejoins vite le programme de fidélité 911 Family® et retrouve les restos les plus proches et bien plus encore.  Avec le programme de fidélité 911 Family® cumule des points à chaque commande et profite de produits offerts. Tu peux accéder à ta carte et la scanner dans les restaurants en caisse ou sur les bornes. Si tu commandes avec l’appli, alors tes points sont automatiquement crédités sur ta carte ! " />
 
     <link rel="icon" href="./assets-images/favicon.png" type="image/x-icon" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    "></script>
+    <link
+      href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    "
+      rel="stylesheet"
+    />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#splide", {
+          type: "loop",
+          autoWidth: true,
+          perPage: 1,
+          autoplay: true,
+          focus: "center",
+          breakpoints: {
+            840: {
+              focus: "center",
+            },
+          },
+        }).mount();
+
+        new Splide("#splide2", {
+          type: "loop",
+          autoWidth: true,
+          perPage: 1,
+          autoplay: true,
+          focus: "center",
+          breakpoints: {
+            840: {
+              focus: "center",
+            },
+          },
+        }).mount();
+      });
+    </script>
 
     <script>
       tailwind.config = {
@@ -19,6 +59,9 @@
             colors: {
               brand: "#318a86",
               grey: "#f4f4f4",
+            },
+            boxShadow: {
+              card: "0 33px 66px rgba(0, 0, 0, 0.16)",
             },
           },
           container: {
@@ -64,69 +107,114 @@
         </div>
       </header>
 
-      <section id="order-bar-section" class="bg-white md:bg-grey py-4 md:py-8 fixed bottom-0 w-full md:relative z-10 border-t border-gray-200 md:border-none">
+      <section class="marketing-page marketing-page_history">
+        <div class="page-banner">
+          <div class="page-banner__wrapper">
+            <img src="./assets-images/11773917.png" class="page-banner__image page-banner__image_desktop w-full hidden lg:block" alt="911 Delicious Company" width="1595" height="593" />
+            <img src="./assets-images/11773918.png" class="page-banner__image page-banner__image_mobile w-full block lg:hidden" alt="911 Delicious Company" width="1000" height="1000" />
+          </div>
+        </div>
+
         <div class="container">
-          <div class="flex justify-between items-center">
-            <div class="hidden md:block">
-              <h2 class="font-bold uppercase text-2xl">All day every day</h2>
-              <p>Nos restaurants: Chenôve - Dijon - Talant</p>
-            </div>
-            <div class="text-center w-full md:w-auto">
-              <a href="https://commander.911dc.com/fr" class="bg-brand text-white rounded-lg font-bold lg:px-8 py-4 text-lg uppercase hover:opacity-80 inline-block px-20">Commander</a>
+          <div class="page-titles font-bold uppercase text-4xl text-center my-20">
+            <h2>911 Delicious Company®</h2>
+            <h2>WE ARE NEW YORK</h2>
+          </div>
+          <div class="info-section">
+            <div class="info-section__wrapper text-center">
+              <div class="slides-section__title text-brand text-3xl font-bold mb-6">SINCE 2007</div>
+              <div class="text-lg max-w-[700px] mx-auto">
+                <p>En 2007,&nbsp;<strong>911</strong><strong>®&nbsp;</strong>est né à New York, en 2022 : level UP !&nbsp;Chez&nbsp;<strong>911 Delicious Company</strong><strong>®&nbsp;</strong>retrouve les 2 produits universels phares :&nbsp;<strong>FRESH PIZZA &amp; SMASH BURGER, all together.</strong>&nbsp;Profite également d’un produit unique : le&nbsp;<strong>doWnut</strong><strong>®&nbsp;</strong>dans le corner&nbsp;<strong>911 Coffee</strong><strong>®</strong>. Inspiration New Yorkaise couronnée : populaire, cosmopolite, décontracté avec des produits délicieux qui sont des valeurs sûres !&nbsp;</p>
+                <p><strong>911</strong><strong>®</strong>: Delicious All Day Every Day.</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section id="carousel-section">
-        <div class="container">
-          <div class="carousel mt-10 md:mt-14">
-            <div class="carousel-item relative">
-              <div class="carousel-title absolute bg-brand uppercase text-white px-20 py-4 font-bold text-2xl -left-12 bottom-10 hidden">La new salmon</div>
-              <a href="https://commander.911dc.com/fr">
-                <img src="./assets/site-web-home-desktop-compressed.jpeg" class="rounded-2xl w-full object-cover hidden lg:block" />
-                <img src="./assets/site-web-home-mobile-compressed.jpg" class="rounded-2xl w-full object-cover block lg:hidden" />
-              </a>
+        <div class="splide-slider my-20">
+          <div class="splide-slider__wrapper">
+            <div id="splide" class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="./assets-images/11773919.png" class="splide__image" alt="911 Delicious Company" width="818" height="598" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./assets-images/11773920.png" class="splide__image" alt="911 Delicious Company" width="818" height="598" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./assets-images/11773921.png" class="splide__image" alt="911 Delicious Company" width="818" height="598" />
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section id="bloc-sections" class="my-10 my-14">
         <div class="container">
-          <div class="flex flex-col md:grid grid-cols-2 gap-x-20 gap-10 md:gap-y-16">
-            <div class="bg-gray-100 rounded-xl overflow-hidden flex flex-col order-1">
-              <img src="./assets/Cover9111.jpg" class="h-[200px] object-cover w-full" />
-              <div class="p-10 flex flex-col flex-1">
-                <h2 class="font-bold text-xl mb-4">Fresh Pizza & Smash Burger ALL TOGETHER !</h2>
-                <p class="leading-loose text-slate-800">911 Delicious Company c’est Fresh Pizza & Smash Burger au même endroit dans un cadre New Yorkais. Un corner 911 coffee avec un produit unique le doWnut est aussi disponible dans nos restaurants</p>
-                <div class="text-center mt-auto">
-                  <a href="./le-concept.html" class="bg-brand text-white rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 inline-block mt-8">Le concept</a>
-                </div>
+          <div class="info-section">
+            <div class="info-section__wrapper text-center">
+              <h3 class="slides-section__title text-brand text-3xl font-bold mb-6">UNE HISTOIRE DE FAMILLE</h3>
+              <div class="text-lg max-w-[700px] mx-auto">
+                <p>C'est lors d'un voyage à New York que deux frères et un ami d'enfance ont imaginé&nbsp;<strong>911</strong><strong>®</strong>. Dès le départ, ils ont imaginé un lieu authentique, familiale et "Melting Pot".&nbsp;</p>
+                <p>Avec 911, tu entres dans la ville Monde : effervescence garantie dans une atmosphère chaleureuse &amp; conviviale. Quand tu viens chez nous,&nbsp;<strong>tu es chez TOI.</strong>&nbsp;Rejoins la famille, fais partie de la&nbsp;<strong>New York Community !</strong></p>
               </div>
             </div>
-            <div class="bg-gray-100 rounded-xl overflow-hidden flex flex-col order-3 md:order-2">
-              <img src="./assets/1-Accueil-911.jpg" class="h-[200px] object-cover w-full" />
-              <div class="p-10 flex flex-col flex-1">
-                <h2 class="font-bold text-xl mb-4">Rejoignez la famille 911 Delicious Company</h2>
-                <p class="leading-loose">Concept multi produits et adaptatif rejoignez le Spirit of New York. Évoluer avec passion dans un environnement de travail intelligent et structuré.</p>
-                <div class="text-center text-slate-800 mt-auto">
-                  <a href="#" class="bg-brand text-white rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 inline-block mt-8">devenir franchisé</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-span-2 bg-brand text-white px-6 md:px-20 py-6 rounded-xl order-2 md:order-3">
-              <div class="flex items-center justify-between">
-                <img src="./assets/911-family-illustration.png" class="w-[100px] md:w-auto" />
-                <div class="text-right">
-                  <img src="./assets/911-family-logo.png" class="inline-block mb-6 w-[200px] md:w-auto" />
-                  <h4 class="font-bold text-md md:text-xl uppercase">LE MEILLEUR DES PROGRAMMES DE fidelité</h4>
-                  <a href="https://911family.zerosix.com/" class="bg-white text-brand rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 md:inline-block mt-8 hidden">en savoir +</a>
-                </div>
-              </div>
+          </div>
+        </div>
 
-              <div class="md:hidden text-center">
-                <a href="https://911family.zerosix.com/" class="bg-white text-brand rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 inline-block mt-8">en savoir +</a>
+        <div class="splide-slider splide-slider_shadow my-20">
+          <div class="splide-slider__wrapper">
+            <div id="splide2" class="splide splide_shadow">
+              <div class="splide__track splide__track_shadow">
+                <ul class="splide__list splide__list_shadow">
+                  <li class="splide__slide">
+                    <img src="./assets-images/11778495.png" class="splide__image" alt="911 Delicious Company" width="800" height="431" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./assets-images/11778496.png" class="splide__image" alt="911 Delicious Company" width="800" height="431" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./assets-images/11778497.png" class="splide__image" alt="911 Delicious Company" width="800" height="431" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="grid lg:grid-cols-2 gap-10">
+            <div class="bg-brand text-white p-10 rounded-xl text-center">
+              <div class="uppercase font-bold text-2xl mb-4">UNE ENVIE DE BIEN FAIRE</div>
+              <div class="text-lg">
+                <p>Reste branché,&nbsp;<strong>911®</strong>&nbsp;te propose régulièrement des nouveautés et des promos. Si tu es végétarien, on a pensé à toi : choisi l'option&nbsp;<em>Make it Veggie</em>&nbsp;et profite de nos&nbsp;<strong>Smash Burger</strong>&nbsp;et&nbsp;<strong>Fresh Pizzas en 100 % veggie</strong>. Notre flotte de&nbsp;<strong>scooter électrique</strong>&nbsp;est éco-responsable, et on s’attache à ce que notre&nbsp;<strong>hygiène</strong>&nbsp;soit&nbsp;<strong>irréprochable</strong>.&nbsp;</p>
+                <p><strong>911 Delicious Company®</strong>, c’est le SPIRIT OF NEW YORK et c’est ouvert à tous et pour tous : 911, c'est&nbsp;<a title="Delicious &amp; Halal" href="delicious_halal.html" target="_blank" rel="noopener" class="underline hover:no-underline">Delicious &amp; Halal</a></p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+
+            <div class="bg-brand text-white p-10 rounded-xl text-center">
+              <div class="uppercase font-bold text-2xl mb-4">Seed, pour faire germer l’espoir</div>
+              <div class="text-lg">
+                <p>
+                  <strong>911®</strong>&nbsp;est engagé auprès du&nbsp;<strong>fonds de dotations Seed</strong>. N’hésite pas à découvrir l’initiative et les projets portés par Seed ici : <a href="https://seedcharity.com/" target="_blank" rel="noopener" class="underline hover:no-underline"><strong>www.seedcharity.com</strong></a>
+                </p>
+
+                <img src="assets-images/history_logo_seed.svg" class="mx-auto mt-4" alt="Seed logotype" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="info-section my-20">
+            <div class="info-section__wrapper text-center">
+              <h3 class="slides-section__title text-3xl font-bold mb-6">REJOINS NOUS VITE</h3>
+              <div class="text-lg max-w-[700px] mx-auto">
+                <p>On reste&nbsp;<strong>ouvert en continu,</strong>&nbsp;parfois jusqu’à&nbsp;<strong>3h du matin</strong>, pour satisfaire tes petites et tes grandes faims, en solo ou retrouver tes amis ou ta famille.</p>
+                <p>Retrouve nous sur place, en&nbsp;<strong>Click &amp; Collect</strong>&nbsp;ou bien en&nbsp;<strong>livraison</strong>.</p>
+                <p>Nos restaurants sont&nbsp;<strong>ouverts 7/7j</strong>&nbsp;et jusqu’à&nbsp;<strong>3h du matin.</strong></p>
               </div>
             </div>
           </div>

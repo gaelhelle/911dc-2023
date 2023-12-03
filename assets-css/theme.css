@@ -17,3 +17,131 @@ body {
 .page_coffee .page-content {
   font-size: 65%;
 }
+
+/* SPLIDE STYLES */
+.splide {
+  position: relative;
+  padding-bottom: 6.4rem;
+}
+
+.splide_shadow {
+  padding-bottom: 0;
+  margin-bottom: 11rem;
+}
+
+.splide__slide {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.splide__slide img {
+  width: auto;
+  margin-bottom: 0;
+}
+
+.splide__arrows {
+  display: none;
+}
+
+.splide__pagination {
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  text-align: center;
+}
+
+.splide__pagination li {
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+.splide__pagination li:first-child {
+  margin-left: 0;
+}
+
+.splide__pagination li:last-child {
+  margin-right: 0;
+}
+
+.splide__pagination .splide__pagination__page {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: solid 0.5rem #2d7f74;
+  background-color: #fff;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.splide__pagination .splide__pagination__page.is-active {
+  background-color: #2d7f74;
+  transform: scale(1);
+}
+
+.splide__list_shadow .splide__slide {
+  box-shadow: 0 33px 33px rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.splide__track_shadow {
+  padding-top: 0.5rem;
+  padding-bottom: 8rem;
+}
+
+@media screen and (max-width: 52.5em) {
+  .splide {
+    padding-bottom: 2.4rem;
+  }
+
+  .splide_shadow {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .splide__slide img {
+    max-width: 64rem;
+  }
+
+  .splide__pagination li {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+
+  .splide__pagination .splide__pagination__page {
+    width: 1rem;
+    height: 1rem;
+    border: solid 0.2rem #2d7f74;
+  }
+
+  .splide-slider ~ .info-section {
+    margin-top: 4.5rem;
+  }
+
+  .splide__track_shadow ~ .splide__pagination {
+    bottom: 4.5rem;
+  }
+
+  .splide__track_shadow ~ .splide__pagination .splide__pagination__page {
+    width: 1rem;
+    height: 1rem;
+    border: solid 0.2rem #2d7f74;
+  }
+}
+@media screen and (max-width: 40em) {
+  .splide__slide img {
+    max-width: 48rem;
+    max-height: 200px;
+  }
+}
+@media screen and (max-width: 30em) {
+  .splide__slide img {
+    max-width: 32rem;
+  }
+}
