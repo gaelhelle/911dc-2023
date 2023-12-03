@@ -136,12 +136,7 @@ body {
 }
 @media screen and (max-width: 40em) {
   .splide__slide img {
-    max-width: 48rem;
+    max-width: 250px;
     max-height: 200px;
-  }
-}
-@media screen and (max-width: 30em) {
-  .splide__slide img {
-    max-width: 32rem;
   }
 }
