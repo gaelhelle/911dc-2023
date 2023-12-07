@@ -54,11 +54,17 @@
           <a href="./">
             <img src="./assets/logo.png" alt="Logo 911 Delicious Company" class="w-[140px] md:w-[200px]" />
           </a>
-          <div class="flex items-center justify-center">
-            <div class="w-[28px] flex flex-col gap-2 cursor-pointer" id="trigger-menu" x-on:click="menuOpen = !menuOpen">
-              <div class="w-full h-[2px] bg-brand"></div>
-              <div class="w-full h-[2px] bg-brand"></div>
-              <div class="w-full h-[2px] bg-brand"></div>
+          <div class="flex items-center gap-10">
+            <div class="items-center gap-10 hidden lg:flex">
+              <a href="https://franchise.911dc.com/" class="text-lg text-brand hover:underline">Devenir franchisé</a>
+              <a href="https://commander.911dc.com/fr" class="bg-brand text-white rounded-lg font-bold lg:px-8 py-4 text-lg uppercase hover:opacity-80 inline-block px-20">Commander</a>
+            </div>
+            <div class="flex items-center justify-center ml-8">
+              <div class="w-[28px] flex flex-col gap-2 cursor-pointer" id="trigger-menu" x-on:click="menuOpen = !menuOpen">
+                <div class="w-full h-[2px] bg-brand"></div>
+                <div class="w-full h-[2px] bg-brand"></div>
+                <div class="w-full h-[2px] bg-brand"></div>
+              </div>
             </div>
           </div>
         </div>
