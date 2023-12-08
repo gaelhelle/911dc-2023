@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
 
     <title>911 Delicious Company - Fresh Pizza &amp; Smash Burger All Together</title>
-    <meta name="description" content="Commande vite chez 911® et retrouve le meilleur du SMASH BURGER et de la FRESH PIZZA sur place, en Click &amp; Collect et en livraison. Avec l’appli, rejoins vite le programme de fidélité 911 Family® et retrouve les restos les plus proches et bien plus encore.  Avec le programme de fidélité 911 Family® cumule des points à chaque commande et profite de produits offerts. Tu peux accéder à ta carte et la scanner dans les restaurants en caisse ou sur les bornes. Si tu commandes avec l’appli, alors tes points sont automatiquement crédités sur ta carte ! " />
+    <meta name="description" content="Commande vite chez 911® et retrouve le meilleur du SMASH BURGER et de la FRESH PIZZA sur place, en Click & Collect et en livraison. Rejoins vite le programme de fidélité 911 Family® et retrouve les restos les plus proches et bien plus encore. Avec le programme de fidélité 911 Family® cumule des points à chaque commande et profite de 5€ offerts. Tu peux accéder utiliser tes points dans les restaurants en caisse, sur les bornes et sur notre site internet ! " />
 
     <link rel="icon" href="./assets-images/favicon.png" type="image/x-icon" />
 
@@ -21,8 +21,8 @@
               grey: "#f4f4f4",
             },
             boxShadow: {
-              'card': '0 33px 66px rgba(0, 0, 0, 0.16)',
-            }
+              card: "0 33px 66px rgba(0, 0, 0, 0.16)",
+            },
           },
           container: {
             padding: "2rem",
@@ -34,21 +34,17 @@
 
     <link rel="stylesheet" type="text/css" href="assets-css/theme.css" />
   </head>
+
   <body x-data="{ menuOpen: false }" :class=" menuOpen ? 'overflow-hidden h-screen' : ''">
-    <noscript>
-      <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-WQ9L29K" height="0" width="0" style="display: none; visibility: hidden"></iframe>
-    </noscript>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27Q7739QFE"></script>
     <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "../www.googletagmanager.com/gtm5445.html?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-WQ9L29K");
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-27Q7739QFE");
     </script>
 
     <div class="page">
@@ -91,13 +87,14 @@
             <div class="bg-white rounded-xl overflow-hidden flex flex-col shadow-card">
               <img src="./assets/pizza partage groupe.jpg" class="h-[300px] object-cover w-full" />
               <div class="p-10 flex flex-col flex-1">
+                <h2 class="font-bold text-xl mb-4 uppercase">Delicious all day every day</h2>
                 <p class="leading-loose text-slate-800">911 Delicious Company reste ouvert en continu, parfois jusqu’à tard dans la nuit, pour satisfaire petite ou grande faim, seul ou retrouver ses amis et sa famille …Prix attractif, nouveautés, strictly halal, Make it Veggie : alternatives végétariennes, flotte de livraison éco-responsable, hygiène irréprochable sont nos engagements pour te faire passer le meilleur moment.</p>
               </div>
             </div>
             <div class="bg-white rounded-xl overflow-hidden flex flex-col shadow-card">
               <img src="./assets/New Salmon.jpg" class="h-[300px] object-cover w-full" />
               <div class="p-10 flex flex-col flex-1">
-                <h2 class="font-bold text-xl mb-4">Chez 911 Delicious Company : produits frais et de qualité</h2>
+                <h2 class="font-bold text-xl mb-4 uppercase">Chez 911 Delicious Company : produits frais et de qualité</h2>
                 <ul class="list-disc leading-loose pl-4">
                   <li>La pâte à pizza est faite de manière artisanal chaque jour,</li>
                   <li>Les ingrédients pour les pizzas sont 100 % frais et de qualité,</li>
@@ -108,7 +105,7 @@
             <div class="bg-white rounded-xl overflow-hidden flex flex-col shadow-card">
               <img src="./assets-images/11822786.png" class="h-[300px] object-cover w-full" />
               <div class="p-10 flex flex-col flex-1">
-                <h3 class="font-bold text-xl mb-4">PREND UNE PAUSE 911 COFFEE® !</h2>
+                <h2 class="font-bold text-xl mb-4 uppercase">PREND UNE PAUSE 911 COFFEE® !</h2>
                 <p class="leading-loose text-slate-800">Découvre nos délicieux doWnut® cuits sur place, déguste nos pâtisseries de NYC et savoure une boisson chaude, froide ou encore un milkshake préparé sous vos yeux. Avec 911 Coffee®, passe un moment chaleureux dans un espace convivial.</p>
                 <div class="text-center mt-auto">
                   <a href="./coffee.html" class="bg-brand text-white rounded-lg font-bold px-8 py-4 text-lg uppercase hover:opacity-80 inline-block mt-8">En savoir +</a>
